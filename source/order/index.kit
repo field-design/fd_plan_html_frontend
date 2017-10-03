@@ -1,0 +1,192 @@
+<!-- @import '/source/kit/settings' -->
+<!-- $page_title = お申し込み -->
+<!-- $description = ディスクリプション -->
+<!-- $keyword = キーワード,キーワード,キーワード -->
+<!-- $page_slug = order -->
+<!DOCTYPE html>
+<html lang="ja">
+<!-- @import '/source/kit/head' -->
+<body class="drawer drawer--right" id="top">
+<!-- @import '/source/kit/gtm' -->
+
+<!-- @import '/source/kit/global-header' -->
+
+
+<!-- START main -->
+<main role="main">
+
+<div class="breadcrumb">
+    <div data-lg>
+        <ul>
+            <li><a href="/">トップページ</a></li>
+            <li>お申し込み</li>
+        </ul>
+    </div>
+</div>
+
+<article>
+    <div data-lg>
+
+        <div class="steps">
+            <ul>
+                <li class="step current"><span>人数・オプション選択</span></li>
+                <li class="step"><span>お客様情報入力</span></li>
+                <li class="step"><span>ご予約内容確認</span></li>
+            </ul>
+        </div>
+
+        <h2><span>人数・オプション選択</span></h2>
+
+        <section class="order-style">
+          <h3 class="order-ttl">お申し込みプラン</h3>
+          <table class="order-table">
+              <tbody>
+                  <tr>
+                      <th class="text-center">主催者</th>
+                      <td class="text-left">事業者名</td>
+                  </tr>
+                  <tr>
+                      <th class="text-center">プラン名</th>
+                      <td class="text-left">コース名</td>
+                  </tr>
+                  <tr>
+                      <th class="text-center">出発日</th>
+                      <td class="text-left">2017年0月0日</td>
+                  </tr>
+                  <tr>
+                      <th class="text-center">集合場所</th>
+                      <td class="text-left">テキストテキスト</td>
+                  </tr>
+              </tbody>
+          </table>
+          <ul class="notes-list">
+              <li>本プランは上記主催者との契約になります。</li>
+          </ul>
+        </section>
+
+        <form method="" action="input.html">
+            <section class="order-cart">
+                <h3 class="product-ttl">人数選択</h3>
+                <p class="order-desc">お申し込みされる人数を入力してください。</p>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">内訳</th>
+                            <th class="text-center">単価</th>
+                            <th class="text-center">人数</th>
+                            <th class="text-center">小計</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">おとな</td>
+                            <td class="text-right">1,800円</td>
+                            <td class="text-center">
+                                <div class="input-field">
+                                    <span class="select">
+                                        <select class="" name="">
+                                            <option value="">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-right">3,600円</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">こども(幼児) </td>
+                            <td class="text-right">1,800円</td>
+                            <td class="text-center">
+                                <div class="input-field">
+                                    <span class="select">
+                                        <select class="" name="">
+                                            <option value="">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-right">1,800円</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                          <th class="text-center" colspan="3">合計</th>
+                          <th class="text-right">5,400円</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <section class="order-input">
+                <h3 class="product-ttl">ご質問事項</h3>
+                <div class="input-wrap">
+                    <div class="input-area">
+                        <label for="">質問1タイトル</label>
+                        <div class="input-field">
+                            <textarea class="full" placeholder="こちらに回答をご記入ください。"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-area">
+                        <label for="">質問2タイトル</label>
+                        <div class="input-field">
+                            <textarea class="full" placeholder="こちらに回答をご記入ください。"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-area">
+                        <label for="">質問3タイトル</label>
+                        <div class="input-field">
+                            <textarea class="full" placeholder="こちらに回答をご記入ください。"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagenation">
+                <div class="back">
+                    <button onclick="history.back()">戻る</button>
+                </div>
+                <div class="next">
+                    <button type="submit" id="submit">次へ</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</article>
+
+</main>
+<!-- END main -->
+
+
+<!-- @import '/source/kit/global-footer' -->
+
+<!-- @import '/source/kit/fonts' -->
+
+<!-- @import '/source/kit/commonscript' -->
+
+<!-- @import '/source/kit/gmap' -->
+
+<!-- Page Script -->
+
+
+<!-- @import '/source/kit/end' -->
+</body>
+</html>
