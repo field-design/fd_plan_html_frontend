@@ -185,9 +185,9 @@
 <div class="overview">
     <div data-lg>
         <div class="title">
-            <div class="now">
+            <!-- <div class="now">
                 <img src="/assets/img/post/now.svg" alt="いますぐ買える">
-            </div>
+            </div> -->
             <p class="sub-ttl">蜃気楼ガイドといく！</p>
             <h2>しんきろうロードサイクリングプラン</h2>
             <p>蜃気楼が見える街として有名な「魚津市」でのレンタサイクルプラン。蜃気楼や各見所をガイドが丁寧にご案内致します。また、電動アシスト付き自転車（大人のみ）なので、どなたでもお気軽にご参加いただけます。</p>
@@ -388,18 +388,21 @@
         <div class="calendar caption" id="entry">
             <h3>お申し込み</h3>
             
-            <div class="order-table-section">
-                <div class="course-select">
-                    <p class="label"><span>コースを選択してください</span></p>
-                    <select name="select" id="select">
-                		<option value="" selected="selected">コースを選択してください</option>
-                        <option value="">Aコース</option>
-                        <option value="">Bコース</option>
-                        <option value="">Cコース</option>
-                        <option value="">Dコース</option>
-                	</select>
+            <div class="order-table-section is-single_">
+                <div class="course-select_new">
+                    <p class="section-label"><span>コースを選ぶ</span></p>
+                    <div class="select-wrap">
+                        <select name="select" id="select">
+                            <option value="" selected="selected">AコースAコースAコースAコースAコースAコースAコースAコース</option>
+                            <option value="">Bコース</option>
+                            <option value="">Cコース</option>
+                            <option value="">Dコース</option>
+                            <optgroup label=""></optgroup>
+                    	</select>
+                    </div>
                 </div>
-                <div id="calendar" class="pre">
+                <div id="calendar">
+                    <p class="section-label"><span>予約日を選ぶ</span></p>
                     <div class="month-pager">
                         <div class="wrap cf">
                             <a class="button prev">
@@ -440,13 +443,13 @@
                                 <td class="tue">
                                     <span>1</span>
                                     <div class="order-status">
-                                        <div class="out"></div>
+                                        <div class="many"></div>
                                     </div>
                                 </td>
                                 <td class="wed">
                                     <span>2</span>
                                     <div class="order-status">
-                                        <div class="out"></div>
+                                        <div class="few"></div>
                                     </div>
                                 </td>
                                 <td class="thu">
@@ -458,13 +461,13 @@
                                 <td class="fri">
                                     <span>4</span>
                                     <div class="order-status">
-                                        <div class="out"></div>
+                                        <div class="not"></div>
                                     </div>
                                 </td>
                                 <td class="sat">
                                     <span>5</span>
                                     <div class="order-status">
-                                        <div class="out"></div>
+                                        <div class="ask"></div>
                                     </div>
                                 </td>
                             </tr>

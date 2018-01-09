@@ -1028,6 +1028,7 @@ img {
     letter-spacing: 3px;
     text-indent: 3px;
     margin: 0 0 30px;
+    padding: 10px 0;
 }
 
 @media screen and (max-width: 479px) {
@@ -1580,6 +1581,7 @@ img {
 
 .order-table-section {
     margin: 20px 0 0;
+    counter-reset: section 0;
 }
 
 .order-table-section .course-select {
@@ -1685,6 +1687,82 @@ img {
     opacity: .3;
 }
 
+.order-table-section .section-label {
+    margin: 1em 0 .25em;
+    font: 400 16px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
+}
+
+.order-table-section .course-select_new select {
+    position: relative;
+    width: 100%;
+    padding: 10px 2.5em 10px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font: 400 16px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
+    border: 2px solid #f44336;
+    color: white;
+    background: #f44336;
+    border-radius: 0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.order-table-section .course-select_new select::-ms-expand {
+    display: none;
+}
+
+.order-table-section .course-select_new select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #828c9a;
+}
+
+.order-table-section .course-select_new select:hover {
+    color: #333;
+    background: white;
+}
+
+.order-table-section .course-select_new select option {
+    background-color: #fff;
+    color: #333;
+}
+
+.order-table-section .course-select_new .select-wrap {
+    position: relative;
+    max-width: 675px;
+    margin: 0 auto 15px;
+}
+
+.order-table-section .course-select_new .select-wrap::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: .5em;
+    width: 25px;
+    height: 1em;
+    margin-top: -.5em;
+    color: white;
+    font-size: 2em;
+    content: '\f13a';
+    font-family: FontAwesome;
+    pointer-events: none;
+}
+
+.order-table-section .course-select_new .select-wrap:hover::after {
+    color: #666;
+}
+
+.order-table-section.is-single .course-select_new {
+    display: none;
+}
+
+.order-table-section:not(.is-single) .section-label span::before {
+    counter-increment: section 1;
+    content: counter(section) ". ";
+}
+
 .order-table-section .pre {
     position: relative;
     width: 100%;
@@ -1788,7 +1866,7 @@ img {
     background-size: 100% auto;
     background-position: center center;
     width: 100%;
-    max-width: 20px;
+    max-width: 25px;
     margin: auto;
 }
 
@@ -1801,27 +1879,27 @@ img {
 
 .order-table-section .order-table th .order-status .many,
 .order-table-section .order-table td .order-status .many {
-    background-image: url(../img/post/icon_many.png);
+    background-image: url(../img/post/icon_many.svg);
 }
 
 .order-table-section .order-table th .order-status .few,
 .order-table-section .order-table td .order-status .few {
-    background-image: url(../img/post/icon_few.png);
+    background-image: url(../img/post/icon_few.svg);
 }
 
 .order-table-section .order-table th .order-status .not,
 .order-table-section .order-table td .order-status .not {
-    background-image: url(../img/post/icon_not.png);
+    background-image: url(../img/post/icon_not.svg);
 }
 
 .order-table-section .order-table th .order-status .out,
 .order-table-section .order-table td .order-status .out {
-    background-image: url(../img/post/icon_out.png);
+    background-image: url(../img/post/icon_out.svg);
 }
 
 .order-table-section .order-table th .order-status .ask,
 .order-table-section .order-table td .order-status .ask {
-    background-image: url(../img/post/icon_ask.png);
+    background-image: url(../img/post/icon_ask.svg);
 }
 
 .order-table-section .order-table th .order-status img,
@@ -1897,23 +1975,23 @@ img {
 }
 
 .order-table-section .notes li .many:before {
-    background-image: url(../img/post/icon_many.png);
+    background-image: url(../img/post/icon_many.svg);
 }
 
 .order-table-section .notes li .few:before {
-    background-image: url(../img/post/icon_few.png);
+    background-image: url(../img/post/icon_few.svg);
 }
 
 .order-table-section .notes li .not:before {
-    background-image: url(../img/post/icon_not.png);
+    background-image: url(../img/post/icon_not.svg);
 }
 
 .order-table-section .notes li .out:before {
-    background-image: url(../img/post/icon_out.png);
+    background-image: url(../img/post/icon_out.svg);
 }
 
 .order-table-section .notes li .ask:before {
-    background-image: url(../img/post/icon_ask.png);
+    background-image: url(../img/post/icon_ask.svg);
 }
 
 .recommend {

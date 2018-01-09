@@ -904,19 +904,19 @@ a:hover {
 .global-header .logo {
     text-align: center;
     margin: 15px auto 25px;
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
 }
 
 @media screen and (max-width: 767px) {
     .global-header .logo {
-        max-width: 300px;
+        max-width: 200px;
     }
 }
 
 @media screen and (max-width: 479px) {
     .global-header .logo {
-        max-width: 250px;
+        max-width: 150px;
     }
 }
 
