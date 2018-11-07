@@ -185,9 +185,9 @@
 <div class="overview">
     <div data-lg>
         <div class="title">
-            <!-- <div class="now">
+            <div class="now">
                 <img src="/assets/img/post/now.svg" alt="いますぐ買える">
-            </div> -->
+            </div>
             <p class="sub-ttl">蜃気楼ガイドといく！</p>
             <h2>しんきろうロードサイクリングプラン</h2>
             <p>蜃気楼が見える街として有名な「魚津市」でのレンタサイクルプラン。蜃気楼や各見所をガイドが丁寧にご案内致します。また、電動アシスト付き自転車（大人のみ）なので、どなたでもお気軽にご参加いただけます。</p>
@@ -375,34 +375,31 @@
         </div>
         <div class="planning caption">
             <h5>ー企画実施会社ー</h5>
-            <p>株式会社観光販売システムズ<br>〒450-0002　名古屋市中村区名駅3丁目21番7号<br>旅行業登録：観光庁長官登録旅行業第1600号<br>総合旅行業務取扱管理者：小川達哉</p>
+            <p>株式会社観光販売システムズ<br>〒450-0002　名古屋市中村区名駅3丁目21番7号<br>旅行業登録：観光庁長官登録旅行業第1600号<br>総合旅行業務取扱管理者：小川達哉<br>販売責任者：山田太郎</p>
             <ul>
                 <li><a href="https://www.kanko-pro.co.jp/agreement/agreement4.php" target="_blank">約款</a></li>
                 <li><a href="https://www.kanko-pro.co.jp/agreement/agreement23.php" target="_blank">旅行条件書</a></li>
                 <li><a href="https://www.kanko-pro.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
                 <li><a href="/" target="_blank">旅行業務取扱料金表</a></li>
             </ul>
-            <p>お問い合わせ先TEL：<a href="tel:">050-3775-4727</a></p>
+            <p>お問い合わせ連絡先：<a href="tel:">050-3775-4727</a></p>
         </div>
 
         <div class="calendar caption" id="entry">
             <h3>お申し込み</h3>
             
-            <div class="order-table-section is-single">
-                <div class="course-select_new">
-                    <p class="section-label"><span>コースを選ぶ</span></p>
-                    <div class="select-wrap">
-                        <select name="select" id="select">
-                            <option value="" selected="selected">AコースAコースAコースAコースAコースAコースAコースAコース</option>
-                            <option value="">Bコース</option>
-                            <option value="">Cコース</option>
-                            <option value="">Dコース</option>
-                            <optgroup label=""></optgroup>
-                    	</select>
-                    </div>
+            <div class="order-table-section">
+                <div class="course-select">
+                    <p class="label"><span>コースを選択してください</span></p>
+                    <select name="select" id="select">
+                		<option value="" selected="selected">コースを選択してください</option>
+                        <option value="">Aコース</option>
+                        <option value="">Bコース</option>
+                        <option value="">Cコース</option>
+                        <option value="">Dコース</option>
+                	</select>
                 </div>
-                <div id="calendar">
-                    <p class="section-label"><span>予約日を選ぶ</span></p>
+                <div id="calendar" class="pre">
                     <div class="month-pager">
                         <div class="wrap cf">
                             <a class="button prev">
@@ -443,13 +440,13 @@
                                 <td class="tue">
                                     <span>1</span>
                                     <div class="order-status">
-                                        <div class="many"></div>
+                                        <div class="out"></div>
                                     </div>
                                 </td>
                                 <td class="wed">
                                     <span>2</span>
                                     <div class="order-status">
-                                        <div class="few"></div>
+                                        <div class="out"></div>
                                     </div>
                                 </td>
                                 <td class="thu">
@@ -461,13 +458,13 @@
                                 <td class="fri">
                                     <span>4</span>
                                     <div class="order-status">
-                                        <div class="not"></div>
+                                        <div class="out"></div>
                                     </div>
                                 </td>
                                 <td class="sat">
                                     <span>5</span>
                                     <div class="order-status">
-                                        <div class="ask"></div>
+                                        <div class="out"></div>
                                     </div>
                                 </td>
                             </tr>
