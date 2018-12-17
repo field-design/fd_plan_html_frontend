@@ -1758,7 +1758,7 @@ img {
   margin: 0 auto 15px;
 }
 
-.order-table-section .course-select_new .select-wrap::after {
+.order-table-section .course-select_new .select-wrap:after {
   display: block;
   position: absolute;
   top: 50%;
@@ -1773,17 +1773,8 @@ img {
   pointer-events: none;
 }
 
-.order-table-section .course-select_new .select-wrap:hover::after {
+.order-table-section .course-select_new .select-wrap:hover:after {
   color: #666;
-}
-
-.order-table-section.is-single .course-select_new {
-  display: none;
-}
-
-.order-table-section:not(.is-single) .section-label span::before {
-  counter-increment: section 1;
-  content: counter(section) ". ";
 }
 
 .order-table-section .pre {
@@ -1889,7 +1880,7 @@ img {
   background-size: 100% auto;
   background-position: center center;
   width: 100%;
-  max-width: 25px;
+  max-width: 20px;
   margin: auto;
 }
 
@@ -1902,27 +1893,27 @@ img {
 
 .order-table-section .order-table th .order-status .many,
 .order-table-section .order-table td .order-status .many {
-  background-image: url(../img/post/icon_many.svg);
+  background-image: url(../img/post/icon_many.png);
 }
 
 .order-table-section .order-table th .order-status .few,
 .order-table-section .order-table td .order-status .few {
-  background-image: url(../img/post/icon_few.svg);
+  background-image: url(../img/post/icon_few.png);
 }
 
 .order-table-section .order-table th .order-status .not,
 .order-table-section .order-table td .order-status .not {
-  background-image: url(../img/post/icon_not.svg);
+  background-image: url(../img/post/icon_not.png);
 }
 
 .order-table-section .order-table th .order-status .out,
 .order-table-section .order-table td .order-status .out {
-  background-image: url(../img/post/icon_out.svg);
+  background-image: url(../img/post/icon_out.png);
 }
 
 .order-table-section .order-table th .order-status .ask,
 .order-table-section .order-table td .order-status .ask {
-  background-image: url(../img/post/icon_ask.svg);
+  background-image: url(../img/post/icon_ask.png);
 }
 
 .order-table-section .order-table th .order-status img,
@@ -1998,23 +1989,32 @@ img {
 }
 
 .order-table-section .notes li .many:before {
-  background-image: url(../img/post/icon_many.svg);
+  background-image: url(../img/post/icon_many.png);
 }
 
 .order-table-section .notes li .few:before {
-  background-image: url(../img/post/icon_few.svg);
+  background-image: url(../img/post/icon_few.png);
 }
 
 .order-table-section .notes li .not:before {
-  background-image: url(../img/post/icon_not.svg);
+  background-image: url(../img/post/icon_not.png);
 }
 
 .order-table-section .notes li .out:before {
-  background-image: url(../img/post/icon_out.svg);
+  background-image: url(../img/post/icon_out.png);
 }
 
 .order-table-section .notes li .ask:before {
-  background-image: url(../img/post/icon_ask.svg);
+  background-image: url(../img/post/icon_ask.png);
+}
+
+.order-table-section.is-single .course-select_new {
+  display: none;
+}
+
+.order-table-section:not(.is-single) .section-label span:before {
+  counter-increment: section 1;
+  content: counter(section) ". ";
 }
 
 .recommend {
