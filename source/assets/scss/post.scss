@@ -49,24 +49,25 @@
             }
         }
         .sub-ttl {
-            @include font(20);
+            @include font(19);
             letter-spacing: 2px;
             color: #4d80a5;
             text-align: center;
-            margin: 0;
-            @media screen and (max-width: $sm - 1) {
-                @include font(18);
+            margin: 0 0 10px;
+            @media screen and (max-width: $md - 1) {
+                @include font(17);
             }
             @media screen and (max-width: $sm - 1) {
-                @include font(16);
+                @include font(15);
+                margin-bottom: 5px;
             }
         }
         h2 {
-            @include font(24);
+            @include font(26);
             letter-spacing: 2px;
             margin: 0;
             @media screen and (max-width: $md - 1) {
-                @include font(21);
+                @include font(22);
             }
             @media screen and (max-width: $sm - 1) {
                 @include font(18);
