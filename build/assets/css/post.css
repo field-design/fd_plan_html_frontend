@@ -940,39 +940,40 @@ img {
 }
 
 .overview .title .sub-ttl {
-  font: 400 20px/160% "Noto Sans Japanese", sans-serif;
-  font: 400 2rem/160% "Noto Sans Japanese", sans-serif;
+  font: 400 19px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 1.9rem/160% "Noto Sans Japanese", sans-serif;
   letter-spacing: 2px;
   color: #4d80a5;
   text-align: center;
-  margin: 0;
+  margin: 0 0 10px;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .overview .title .sub-ttl {
-    font: 400 18px/160% "Noto Sans Japanese", sans-serif;
-    font: 400 1.8rem/160% "Noto Sans Japanese", sans-serif;
+    font: 400 17px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 1.7rem/160% "Noto Sans Japanese", sans-serif;
   }
 }
 
 @media screen and (max-width: 479px) {
   .overview .title .sub-ttl {
-    font: 400 16px/160% "Noto Sans Japanese", sans-serif;
-    font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
+    font: 400 15px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 1.5rem/160% "Noto Sans Japanese", sans-serif;
+    margin-bottom: 5px;
   }
 }
 
 .overview .title h2 {
-  font: 400 24px/160% "Noto Sans Japanese", sans-serif;
-  font: 400 2.4rem/160% "Noto Sans Japanese", sans-serif;
+  font: 400 26px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 2.6rem/160% "Noto Sans Japanese", sans-serif;
   letter-spacing: 2px;
   margin: 0;
 }
 
 @media screen and (max-width: 767px) {
   .overview .title h2 {
-    font: 400 21px/160% "Noto Sans Japanese", sans-serif;
-    font: 400 2.1rem/160% "Noto Sans Japanese", sans-serif;
+    font: 400 22px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 2.2rem/160% "Noto Sans Japanese", sans-serif;
   }
 }
 
