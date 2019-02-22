@@ -338,37 +338,55 @@
         @media screen and (max-width: $sm - 1) {
             margin: 30px auto 0;
         }
-        #side_bar {
-            margin-bottom: 10px;
-            a {
-                @include font(17);
-                color: #000;
-                letter-spacing: 2px;
-                @media screen and (max-width: $sm - 1) {
-                    @include font(14);
-                }
-                i {
-                    font-size: 1.25em;
-                }
-                &:hover {
-                    text-decoration: none;
-                }
+        .place-name {
+            @include font(17);
+            color: #000;
+            letter-spacing: 2px;
+            @media screen and (max-width: $sm - 1) {
+                @include font(14);
+            }
+            i {
+                font-size: 1.25em;
             }
         }
-        #cuerpo {
+        iframe {
             width: 100%;
-            #map_canvas {
-                width: auto;
-                height: 400px;
-                text-align: left;
-                @media screen and (max-width: $sm - 1) {
-                    height: 300px;
-                }
-                a {
-                    color: #40708d;
-                }
+            height: 400px;
+            @media screen and (max-width: $sm - 1) {
+                height: 300px;
             }
         }
+        // #side_bar {
+        //     margin-bottom: 10px;
+        //     a {
+        //         @include font(17);
+        //         color: #000;
+        //         letter-spacing: 2px;
+        //         @media screen and (max-width: $sm - 1) {
+        //             @include font(14);
+        //         }
+        //         i {
+        //             font-size: 1.25em;
+        //         }
+        //         &:hover {
+        //             text-decoration: none;
+        //         }
+        //     }
+        // }
+        // #cuerpo {
+        //     width: 100%;
+        //     #map_canvas {
+        //         width: auto;
+        //         height: 400px;
+        //         text-align: left;
+        //         @media screen and (max-width: $sm - 1) {
+        //             height: 300px;
+        //         }
+        //         a {
+        //             color: #40708d;
+        //         }
+        //     }
+        // }
     }
     .caution,.other {
         ul {
