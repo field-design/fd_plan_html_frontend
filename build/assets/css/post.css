@@ -1365,11 +1365,7 @@ img {
   }
 }
 
-.overview .map #side_bar {
-  margin-bottom: 10px;
-}
-
-.overview .map #side_bar a {
+.overview .map .place-name {
   font: 400 17px/160% "Noto Sans Japanese", sans-serif;
   font: 400 1.7rem/160% "Noto Sans Japanese", sans-serif;
   color: #000;
@@ -1377,38 +1373,25 @@ img {
 }
 
 @media screen and (max-width: 479px) {
-  .overview .map #side_bar a {
+  .overview .map .place-name {
     font: 400 14px/160% "Noto Sans Japanese", sans-serif;
     font: 400 1.4rem/160% "Noto Sans Japanese", sans-serif;
   }
 }
 
-.overview .map #side_bar a i {
+.overview .map .place-name i {
   font-size: 1.25em;
 }
 
-.overview .map #side_bar a:hover {
-  text-decoration: none;
-}
-
-.overview .map #cuerpo {
+.overview .map iframe {
   width: 100%;
-}
-
-.overview .map #cuerpo #map_canvas {
-  width: auto;
   height: 400px;
-  text-align: left;
 }
 
 @media screen and (max-width: 479px) {
-  .overview .map #cuerpo #map_canvas {
+  .overview .map iframe {
     height: 300px;
   }
-}
-
-.overview .map #cuerpo #map_canvas a {
-  color: #40708d;
 }
 
 .overview .caution ul, .overview .other ul {
