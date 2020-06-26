@@ -296,6 +296,9 @@ h2 {
             text-align: center;
             max-width: 3em;
         }
+        select {
+            font-family: $font-family_base;
+        }
         ul {
             margin: 0;
             padding: 0;
@@ -312,6 +315,49 @@ h2 {
     }
     .text-center {
         text-align: center;
+    }
+}
+
+.flex-counter {
+  display: flex;
+  justify-content: space-between;
+  @include max-md {
+      display: block;
+  }
+}
+
+.order-table-left {
+    width: 56%;
+    @include max-md {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+.order-table-right {
+    border-top: solid 2px #DBDBDB;
+    border-bottom: solid 2px #DBDBDB;
+    width: 36%;
+    margin-top: 0!important;
+    margin-bottom: 25px;
+    @include max-md {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    tbody {
+        tr {
+            &:hover {
+                background-color: #fff!important;
+            }
+            th {
+                width: 6em;
+                background: #f6f6f6;
+
+                @include max-md {
+                    width: 50%;
+                }
+            }
+        }
     }
 }
 
