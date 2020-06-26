@@ -202,7 +202,7 @@
         <div class="cost caption">
             <h3>代 金</h3>
             <div class="cost-group">
-                <h4>〇〇コース</h4>
+                <h4>〇〇〇〇コース</h4>
                 <p>おひとりさま</p>
                 <table>
                     <tbody>
@@ -392,16 +392,17 @@
             
             <div class="order-table-section">
                 <div class="course-select">
-                    <p class="label"><span>コースを選択してください</span></p>
+                    <p class="label"><span>プラン・コースを選択してください</span></p>
                     <select name="select" id="select">
-                		<option value="" selected="selected">コースを選択してください</option>
-                        <option value="">Aコース</option>
-                        <option value="">Bコース</option>
-                        <option value="">Cコース</option>
-                        <option value="">Dコース</option>
+                    		<option value="select" selected="selected">プラン・コースを選択してください</option>
+                        <option value="A">Aコース</option>
+                        <option value="B">Bコース</option>
+                        <option value="C">Cコース</option>
+                        <option value="D">Dコース</option>
                 	</select>
                 </div>
-                <div id="calendar" class="pre">
+                <!-- <div id="calendar" class="pre"> -->
+                <div id="calendar">
                     <div class="month-pager">
                         <div class="wrap cf">
                             <a class="button prev">
@@ -830,6 +831,38 @@
         $('.recommend .item .text h5').matchHeight();
         $('.recommend .item .text p').matchHeight();
     });
+
+    $(function() {
+        var obj = document.getElementById("calendar");
+
+        var detailLength = $("#select").children('option').length;
+        if(detailLength > 1) {
+            obj.classList.add("pre");
+        }
+        
+        $('#select').change(function() {
+            var extraction_val = $('option:selected').val();
+            if(extraction_val != "select") {
+                obj.classList.add("pro");
+                obj.classList.remove("pre");
+            } else {
+                obj.classList.add("pre");
+                obj.classList.remove("pro");
+            }
+            console.log(obj.classList);
+        });
+    });
+    // $(function() {
+    //   var obj = document.getElementById("calendar");
+    //   var extraction_val = $("#select").val();
+    //
+    //   if(extraction_val == "select") {
+    //     obj.classList.add("pre");
+    //     console.log(obj.classList);
+    //   // } else {
+    //   //   obj.classList.add("no-pre");
+    //   }
+    // });
 </script>
 <!-- <script type="text/javascript">
     var side_bar_html = '';
