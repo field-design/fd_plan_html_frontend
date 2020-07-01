@@ -229,6 +229,12 @@ h2 {
   @include font(16);
 }
 
+.order-desc {
+  .note {
+    @include font(13);
+  }
+}
+
 .order-contact {
   margin-bottom: 60px;
 }
