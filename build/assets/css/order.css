@@ -1052,7 +1052,8 @@ h2 span {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 3px;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   font-size: 1rem;
   height: 2.285em;
   position: relative;
@@ -1073,6 +1074,7 @@ h2 span {
   color: #fff;
   cursor: pointer;
   -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
   transition: all .2s ease;
 }
 
@@ -1121,6 +1123,11 @@ h2 span {
 .complete-desc {
   font: 400 16px/160% "Noto Sans Japanese", sans-serif;
   font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
+}
+
+.order-desc .note {
+  font: 400 13px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 1.3rem/160% "Noto Sans Japanese", sans-serif;
 }
 
 .order-contact {
@@ -1196,6 +1203,10 @@ h2 span {
   max-width: 3em;
 }
 
+.order-table tbody select {
+  font-family: "Noto Sans Japanese", sans-serif;
+}
+
 .order-table tbody ul {
   margin: 0;
   padding: 0;
@@ -1215,6 +1226,62 @@ h2 span {
 
 .order-table .text-center {
   text-align: center;
+}
+
+.flex-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .flex-counter {
+    display: block;
+  }
+}
+
+.order-table-left {
+  width: 56%;
+}
+
+@media screen and (max-width: 767px) {
+  .order-table-left {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+.order-table-right {
+  border-top: solid 2px #DBDBDB;
+  border-bottom: solid 2px #DBDBDB;
+  width: 36%;
+  margin-top: 0 !important;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .order-table-right {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.order-table-right tbody tr:hover {
+  background-color: #fff !important;
+}
+
+.order-table-right tbody tr th {
+  width: 6em;
+  background: #f6f6f6;
+}
+
+@media screen and (max-width: 767px) {
+  .order-table-right tbody tr th {
+    width: 50%;
+  }
 }
 
 .order-input .input-ttl,
@@ -1258,7 +1325,8 @@ h2 span {
 .order-input .input-field,
 .order-payment .input-field {
   display: inline;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .order-input .input-field input,
@@ -1278,10 +1346,13 @@ h2 span {
   background-color: #fff;
   border: 1px solid #dbdbdb;
   color: #363636;
-  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+          box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
   transition: all .2s ease;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .order-input .input-field textarea,
@@ -1297,7 +1368,8 @@ h2 span {
 .order-payment .input-field input[type="radio"],
 .order-payment .input-field input[type="checkbox"] {
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   vertical-align: middle;
   border-radius: 0;
   background: none;
@@ -1307,6 +1379,7 @@ h2 span {
   -webkit-appearance: button;
   -moz-appearance: button;
        appearance: button;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   width: 24px;
@@ -1315,6 +1388,7 @@ h2 span {
   background-color: #FFFFFF;
   border: 1px solid #999999;
   border-radius: 24px;
+  -webkit-box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2);
   box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2);
   vertical-align: middle;
   cursor: pointer;
@@ -1354,7 +1428,7 @@ h2 span {
 
 @media screen and (min-width: 480px) {
   .order-input .input-field .short,
-  .order-payment .input-field .short {
+.order-payment .input-field .short {
     max-width: 120px;
   }
 }
@@ -1366,7 +1440,7 @@ h2 span {
 
 @media screen and (min-width: 480px) {
   .order-input .input-field .medium,
-  .order-payment .input-field .medium {
+.order-payment .input-field .medium {
     max-width: 230px;
   }
 }
@@ -1378,7 +1452,7 @@ h2 span {
 
 @media screen and (min-width: 480px) {
   .order-input .input-field .long,
-  .order-payment .input-field .long {
+.order-payment .input-field .long {
     max-width: 400px;
   }
 }
@@ -1390,19 +1464,19 @@ h2 span {
 
 @media screen and (max-width: 479px) {
   .order-input .input-field.box,
-  .order-payment .input-field.box {
+.order-payment .input-field.box {
     position: relative;
   }
   .order-input .input-field.box .select,
-  .order-payment .input-field.box .select {
+.order-payment .input-field.box .select {
     width: calc(100% - 3em);
   }
   .order-input .input-field.box .select select,
-  .order-payment .input-field.box .select select {
+.order-payment .input-field.box .select select {
     width: inherit;
   }
   .order-input .input-field.box .notes,
-  .order-payment .input-field.box .notes {
+.order-payment .input-field.box .notes {
     width: 1em;
   }
 }
@@ -1472,10 +1546,12 @@ h2 span {
   color: #666;
   border: 1px solid;
   -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
   transition: all .2s ease;
   width: 100%;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .pagenation button:hover {
