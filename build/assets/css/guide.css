@@ -977,7 +977,7 @@ h3 {
 .flow .wrap.blue:before {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/blue_triangle.png);
+  background-image: url(https://visit-town.com/common/img/guide/blue_triangle.png);
   background-size: cover;
   width: 20px;
   height: 20px;
@@ -996,7 +996,7 @@ h3 {
 .flow .wrap.green:before {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/green_triangle.png);
+  background-image: url(https://visit-town.com/common/img/guide/green_triangle.png);
   background-size: cover;
   width: 20px;
   height: 20px;
@@ -1028,7 +1028,7 @@ h3 {
 .flow .flow-1 .wrap:before {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 40px;
   bottom: 0;
@@ -1039,7 +1039,7 @@ h3 {
 .flow .flow-1 .wrap:after {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 40px;
   bottom: 0;
@@ -1050,7 +1050,7 @@ h3 {
 .flow .flow-2 .wrap:before {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 40px;
   bottom: 0;
@@ -1061,7 +1061,7 @@ h3 {
 .flow .flow-2 .wrap:after {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 40px;
   bottom: 0;
@@ -1076,7 +1076,7 @@ h3 {
 .flow .flow-3 .wrap.right:after, .flow .flow-4 .wrap.right:after, .flow .flow-5 .wrap.right:after {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 40px;
   bottom: 0;
@@ -1091,7 +1091,7 @@ h3 {
 .flow .flow-3 .wrap.left:after {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 40px;
   bottom: 0;
@@ -1102,7 +1102,7 @@ h3 {
 .flow .flow-4 .wrap.left:after, .flow .flow-5 .wrap.left:after {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 100%;
   top: 0;
@@ -1118,7 +1118,7 @@ h3 {
 .flow .flow-6 .wrap.left:after {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 100%;
   top: 0;
@@ -1156,7 +1156,7 @@ h3 {
 .flow .flow-6 .irregular .wrap.center:after {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 40px;
   bottom: 0;
@@ -1167,7 +1167,7 @@ h3 {
 .flow .flow-6 .irregular .wrap.center .frame:before {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/gray_bar.png);
+  background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
   width: 9px;
   height: 56px;
   top: -61px;
@@ -1184,7 +1184,7 @@ h3 {
 .flow .flow-6 .irregular .wrap.right .frame:before {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/down_arrow.png);
+  background-image: url(https://visit-town.com/common/img/guide/down_arrow.png);
   width: 53px;
   height: 56px;
   top: -61px;
@@ -1205,7 +1205,7 @@ h3 {
 .flow .flow-7 .wrap:after {
   position: absolute;
   content: "";
-  background-image: url(//cdn.visit-town.com/common/img/guide/down_arrow.png);
+  background-image: url(https://visit-town.com/common/img/guide/down_arrow.png);
   width: 53px;
   height: 56px;
   bottom: 4px;
