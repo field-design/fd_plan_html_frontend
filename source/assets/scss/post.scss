@@ -526,6 +526,11 @@
                 }
             }
         }
+        &.contract {
+          ul {
+            display: none;
+          }
+        }
     }
 }
 
