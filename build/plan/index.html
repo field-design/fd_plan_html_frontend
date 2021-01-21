@@ -375,6 +375,8 @@
                 <li>取消しまたは人員減による払い戻しを行う場合は、所定の取消料率を差し引いて返金させていただきますが、返金にかかる振込手数料はお客様負担とさせていただきます。<br>同様に乗車券等の商品を購入されて払戻しをされる場合、取消料なしの表記のあるものは取消料がかかりませんが返金にかかる振込手数料はお客様負担とさせていただきます。</li>
             </ul>
         </div>
+
+        <!-- start 通常パターン 企画実施会社のみ -->
         <div class="planning caption">
             <h5>ー企画実施会社ー</h5>
             <p>株式会社観光販売システムズ<br>〒450-0002　名古屋市中村区名駅3丁目21番7号<br>旅行業登録：観光庁長官登録旅行業第1600号<br>総合旅行業務取扱管理者：小川達哉<br>販売責任者：山田太郎</p>
@@ -386,23 +388,48 @@
             </ul>
             <p>お問い合わせ連絡先：<a href="tel:">050-3775-4727</a></p>
         </div>
+        <!-- end 通常パターン 企画実施会社のみ -->
+
+        <!-- start 受託販売会社表示のパターン -->
+        <div class="planning caption">
+            <h5>ー企画実施会社ー</h5>
+            <p>株式会社観光販売システムズ<br>〒450-0002　名古屋市中村区名駅3丁目21番7号<br>旅行業登録：観光庁長官登録旅行業第1600号<br>総合旅行業務取扱管理者：小川達哉<br>販売責任者：山田太郎</p>
+            <ul>
+                <li><a href="https://www.kanko-pro.co.jp/agreement/agreement4.php" target="_blank">約款</a></li>
+                <li><a href="https://www.kanko-pro.co.jp/agreement/agreement23.php" target="_blank">旅行条件書</a></li>
+                <li><a href="https://www.kanko-pro.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+                <li><a href="/" target="_blank">旅行業務取扱料金表</a></li>
+            </ul>
+            <p>お問い合わせ連絡先：<a href="tel:">050-3775-4727</a></p>
+        </div>
+        <div class="planning caption contract">
+            <h5>ー受託販売会社ー</h5>
+            <p>株式会社観光販売システムズ<br>〒450-0002　名古屋市中村区名駅3丁目21番7号<br>旅行業登録：観光庁長官登録旅行業第1600号<br>総合旅行業務取扱管理者：小川達哉<br>販売責任者：山田太郎</p>
+            <ul>
+                <li><a href="https://www.kanko-pro.co.jp/agreement/agreement4.php" target="_blank">約款</a></li>
+                <li><a href="https://www.kanko-pro.co.jp/agreement/agreement23.php" target="_blank">旅行条件書</a></li>
+                <li><a href="https://www.kanko-pro.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+                <li><a href="/" target="_blank">旅行業務取扱料金表</a></li>
+            </ul>
+            <p>お問い合わせ連絡先：<a href="tel:">050-3775-4727</a></p>
+        </div>
+        <!-- end 受託販売会社表示のパターン -->
 
         <div class="calendar caption" id="entry">
             <h3>お申し込み</h3>
             
             <div class="order-table-section">
                 <div class="course-select">
-                    <p class="label"><span>プラン・コースを選択してください</span></p>
+                    <p class="label"><span>コースを選択してください</span></p>
                     <select name="select" id="select">
-                    		<option value="select" selected="selected">プラン・コースを選択してください</option>
-                        <option value="A">Aコース</option>
-                        <option value="B">Bコース</option>
-                        <option value="C">Cコース</option>
-                        <option value="D">Dコース</option>
+                		<option value="" selected="selected">コースを選択してください</option>
+                        <option value="">Aコース</option>
+                        <option value="">Bコース</option>
+                        <option value="">Cコース</option>
+                        <option value="">Dコース</option>
                 	</select>
                 </div>
-                <!-- <div id="calendar" class="pre"> -->
-                <div id="calendar">
+                <div id="calendar" class="pre">
                     <div class="month-pager">
                         <div class="wrap cf">
                             <a class="button prev">
@@ -839,7 +866,7 @@
         if(detailLength > 1) {
             obj.classList.add("pre");
         }
-        
+
         $('#select').change(function() {
             var extraction_val = $('option:selected').val();
             if(extraction_val != "select") {
