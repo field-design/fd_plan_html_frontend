@@ -1584,6 +1584,10 @@ img {
   }
 }
 
+.overview .planning.contract ul {
+  display: none;
+}
+
 .order-table-section {
   margin: 20px 0 0;
   counter-reset: section 0;
