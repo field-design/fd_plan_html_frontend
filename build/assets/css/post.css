@@ -889,7 +889,7 @@ img {
 .mainvisual .bxslider .slide:before {
   content: "";
   display: block;
-  padding-top: 60%;
+  padding-top: 50%;
 }
 
 .overview .title {
@@ -2123,6 +2123,50 @@ img {
   border-color: transparent transparent transparent #fff;
   top: 6px;
   right: -13px;
+}
+
+.ex-reservation {
+  max-width: 675px;
+  margin: auto;
+  padding: 30px 0 50px;
+}
+
+.ex-reservation a {
+  display: block;
+  color: #fff;
+  background-color: #4d4d4d;
+  text-decoration: none;
+  font: 400 24px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 2.4rem/160% "Noto Sans Japanese", sans-serif;
+  letter-spacing: 3px;
+  font-weight: normal;
+  padding: 15px 0;
+}
+
+.ex-reservation a span {
+  position: relative;
+  padding-right: 40px;
+}
+
+.ex-reservation a span:after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/post/icon_ex.svg);
+  background-position: center center;
+  background-size: cover;
+  width: 21px;
+  height: 18px;
+  top: 55%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.ex-reservation p {
+  margin: 10px 0;
+  font: 400 16px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
 }
 
 .btn-entry {
