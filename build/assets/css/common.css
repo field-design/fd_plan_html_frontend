@@ -939,19 +939,19 @@ a:hover {
 .global-header .logo {
   text-align: center;
   margin: 15px auto 25px;
-  max-width: 200px;
+  max-width: 300px;
   height: auto;
 }
 
 @media screen and (max-width: 767px) {
   .global-header .logo {
-    max-width: 200px;
+    max-width: 300px;
   }
 }
 
 @media screen and (max-width: 479px) {
   .global-header .logo {
-    max-width: 150px;
+    max-width: 250px;
   }
 }
 
@@ -2788,22 +2788,5 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-[data-loading] {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 10000000;
-}
-
-[data-loading] > * {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
 }
 /*# sourceMappingURL=common.css.map */
