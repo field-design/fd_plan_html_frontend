@@ -889,7 +889,7 @@ img {
 .mainvisual .bxslider .slide:before {
   content: "";
   display: block;
-  padding-top: 50%;
+  padding-top: 40%;
 }
 
 .overview .title {
