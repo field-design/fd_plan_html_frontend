@@ -1286,10 +1286,46 @@ img {
   }
 }
 
+.overview .details .accordion p span {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 30px;
+  padding-top: 56.25%;
+}
+
+.overview .details .accordion p span iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .overview .details .accordion img {
   width: 100%;
   max-width: 675px;
   height: auto;
+}
+
+.overview .details .accordion .youtube {
+  width: 100%;
+  max-width: 675px;
+  margin: auto;
+}
+
+.overview .details .accordion .youtube .youtube-inner {
+  display: block;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.overview .details .accordion .youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .overview .details .detail {
