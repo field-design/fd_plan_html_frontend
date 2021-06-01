@@ -1084,11 +1084,11 @@ h3 {
   margin-left: -4.5px;
 }
 
-.flow .flow-3 .wrap {
+.flow .flow-3 .wrap, .flow .flow-4 .wrap {
   width: 49%;
 }
 
-.flow .flow-3 .wrap.left:after {
+.flow .flow-3 .wrap.left:after, .flow .flow-4 .wrap.left:after {
   position: absolute;
   content: "";
   background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
@@ -1099,7 +1099,7 @@ h3 {
   margin-left: -4.5px;
 }
 
-.flow .flow-4 .wrap.left:after, .flow .flow-5 .wrap.left:after {
+.flow .flow-5 .wrap.left:after {
   position: absolute;
   content: "";
   background-image: url(https://visit-town.com/common/img/guide/gray_bar.png);
