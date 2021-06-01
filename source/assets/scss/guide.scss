@@ -177,7 +177,7 @@ h3 {
             }
         }
     }
-    .flow-3 {
+    .flow-3,.flow-4, {
         .wrap {
             width: 49%;
             &.left {
@@ -194,7 +194,7 @@ h3 {
             }
         }
     }
-    .flow-4,.flow-5 {
+    .flow-5 {
         .wrap.left {
             &:after {
                 position: absolute;
