@@ -892,6 +892,26 @@ h2 span {
   padding: 0 5px 5px;
 }
 
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
 .steps {
   max-width: 650px;
   margin: 15px auto 30px;
