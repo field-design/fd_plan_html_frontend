@@ -362,6 +362,19 @@
             }
         }
     }
+    .tour-detail {
+        p {
+            text-align: left;
+            @include font(16);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            margin: 0 0 10px;
+            @media screen and (max-width: $sm - 1) {
+                @include font(14);
+                line-height: 1.8;
+            }
+        }
+    }
     .map {
         width: 100%;
         max-width: 1000px;
@@ -623,7 +636,7 @@
             width: 100%;
             @include font(17);
             padding: 0 1em;
-            color: #fff;
+            color: #333;
             background-color: #fff;
             line-height: 35px;
             border: 1px solid #ddd;
