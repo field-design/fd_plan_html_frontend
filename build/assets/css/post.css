@@ -1389,6 +1389,23 @@ img {
   }
 }
 
+.overview .tour-detail p {
+  text-align: left;
+  font: 400 16px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+}
+
+@media screen and (max-width: 479px) {
+  .overview .tour-detail p {
+    font: 400 14px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 1.4rem/160% "Noto Sans Japanese", sans-serif;
+    line-height: 1.8;
+  }
+}
+
 .overview .map {
   width: 100%;
   max-width: 1000px;
@@ -1695,7 +1712,7 @@ img {
   font: 400 17px/160% "Noto Sans Japanese", sans-serif;
   font: 400 1.7rem/160% "Noto Sans Japanese", sans-serif;
   padding: 0 1em;
-  color: #fff;
+  color: #333;
   background-color: #fff;
   line-height: 35px;
   border: 1px solid #ddd;
