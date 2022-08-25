@@ -326,6 +326,16 @@ h2 {
     .text-center {
         text-align: center;
     }
+    .credit-icon-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 30px;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
 }
 
 .flex-counter {
