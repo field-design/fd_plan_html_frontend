@@ -19,6 +19,13 @@
     }
 }
 
+.breadcrumb {
+    margin-top: 20px;
+    @media screen and (max-width: ($md - 1)) {
+        margin-top: 10px;
+    }
+}
+
 .overview {
     .title {
         margin: 30px 0 0;
@@ -26,10 +33,10 @@
         .now {
             max-width: 220px;
             margin: 0 auto 10px;
-            @media screen and (max-width: $md - 1) {
+            @media screen and (max-width: ($md - 1)) {
                 max-width: 190px;
             }
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 max-width: 150px;
             }
         }
@@ -38,13 +45,13 @@
             @include font(17);
             letter-spacing: 1px;
             line-height: 1.8;
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 @include font(15);
                 line-height: 1.8;
             }
-            @media screen and (max-width: $sm - 1) {
-                @include font(14);
-                line-height: 1.8;
+            @media screen and (max-width: ($sm - 1)) {
+                // @include font(14);
+                // line-height: 1.8;
                 margin: 15px 0;
             }
         }
@@ -54,23 +61,24 @@
             color: #4d80a5;
             text-align: center;
             margin: 0 0 10px;
-            @media screen and (max-width: $md - 1) {
+            @media screen and (max-width: ($md - 1)) {
                 @include font(17);
             }
-            @media screen and (max-width: $sm - 1) {
-                @include font(15);
+            @media screen and (max-width: ($sm - 1)) {
+                // @include font(15);
                 margin-bottom: 5px;
             }
         }
-        h2 {
+        h1 {
             @include font(26);
             letter-spacing: 2px;
             margin: 0;
-            @media screen and (max-width: $md - 1) {
+            @media screen and (max-width: ($md - 1)) {
                 @include font(22);
             }
-            @media screen and (max-width: $sm - 1) {
-                @include font(18);
+            @media screen and (max-width: ($sm - 1)) {
+                @include font(20);
+                letter-spacing: 1px;
             }
         }
         .keyword {
@@ -78,10 +86,10 @@
                 @include font(14);
                 margin: 3px 5px;
                 padding: 0;
-                @media screen and (max-width: $md - 1) {
+                @media screen and (max-width: ($md - 1)) {
                     @include font(13);
                 }
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     @include font(12);
                     margin: 3px;
                 }
@@ -90,11 +98,11 @@
                     text-decoration: none;
                     padding: 0 10px;
                     line-height: 25px;
-                    @media screen and (max-width: $md - 1) {
+                    @media screen and (max-width: ($md - 1)) {
                         padding: 0 8px;
                         line-height: 22px;
                     }
-                    @media screen and (max-width: $sm - 1) {
+                    @media screen and (max-width: ($sm - 1)) {
                         padding: 0 6px;
                         line-height: 20px;
                     }
@@ -105,7 +113,7 @@
     .caption {
         text-align: center;
         margin: 40px 0 0;
-        @media screen and (max-width: $sm - 1) {
+        @media screen and (max-width: ($sm - 1)) {
             margin: 30px 0 0;
         }
         h3 {
@@ -116,7 +124,7 @@
             text-indent: 3px;
             margin: 0 0 30px;
             padding: 10px 0;
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 @include font(18);
                 margin-bottom: 20px;
             }
@@ -126,88 +134,147 @@
             color: #40708d;
             letter-spacing: 3px;
             margin: 0 0 15px;
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 @include font(18);
             }
         }
     }
     .cost {
-        .cost-group {
-            margin: auto;
-            max-width: 540px;
-            h4 {
-                margin-bottom: 0;
-                @include font(18);
-                text-align: left;
-            }
-            p {
-                margin-top: .5em;
-                @include font(16);
-                text-align: left;
-            }
-        }
-        table {
-            margin: auto;
-            max-width: 700px;
-            th {
-                min-width: 55px;
-                margin: 0;
-                padding: 0 25px;
-                @include font(18);
-                line-height: 40px;
-                color: #fff;
-                background-color: #4191ad;
-                display: inline-block;
-                @media screen and (max-width: $sm - 1) {
-                    display: inline-block;
+        position: relative;
+        .cost-group-wrap {
+            position: relative;
+            .cost-group {
+                margin: auto;
+                max-width: 540px;
+                h4 {
+                    margin-bottom: 0;
+                    @include font(18);
+                    text-align: left;
+                }
+                p {
+                    margin-top: .5em;
                     @include font(16);
-                    line-height: 35px;
-                    padding: 0 20px;
+                    text-align: left;
                 }
             }
-            td {
-                text-align: left;
-                padding: 0 0 20px 25px;
-                max-width: 450px;
-                @media screen and (max-width: $sm - 1) {
-                    display: block;
-                    padding: 5px 0 25px;
-                }
-                > span {
-                    display: block;
-                }
-                .price {
-                    @include font(22);
-                    letter-spacing: 2px;
-                    text-indent: 2px;
+            table {
+                margin: auto;
+                max-width: 700px;
+                th {
+                    min-width: 55px;
                     margin: 0;
-                    @media screen and (max-width: $sm - 1) {
-                        @include font(18);
-                        text-align: center;
-                        padding-bottom: 5px;
+                    padding: 0 25px;
+                    @include font(18);
+                    line-height: 40px;
+                    color: #fff;
+                    background-color: #4191ad;
+                    display: inline-block;
+                    @media screen and (max-width: ($sm - 1)) {
+                        display: inline-block;
+                        @include font(16);
+                        line-height: 35px;
+                        padding: 0 20px;
                     }
-                    span {
-                        @include font(34);
-                        line-height: 1;
-                        @media screen and (max-width: $sm - 1) {
-                            @include font(30);
+                }
+                td {
+                    text-align: left;
+                    padding: 0 0 20px 25px;
+                    max-width: 450px;
+                    @media screen and (max-width: ($sm - 1)) {
+                        display: block;
+                        padding: 5px 0 25px;
+                    }
+                    > span {
+                        display: block;
+                    }
+                    .price {
+                        @include font(22);
+                        letter-spacing: 2px;
+                        text-indent: 2px;
+                        margin: 0;
+                        @media screen and (max-width: ($sm - 1)) {
+                            @include font(18);
+                            text-align: center;
+                            padding-bottom: 5px;
+                        }
+                        span {
+                            @include font(34);
+                            line-height: 1;
+                            @media screen and (max-width: ($sm - 1)) {
+                                @include font(30);
+                            }
+                        }
+                    }
+                    .remarks {
+                        @include font(14);
+                        position: relative;
+                        padding-left: 1em;
+                        @media screen and (max-width: ($sm - 1)) {
+                            @include font(13);
+                            // max-width: 250px;
+                            // margin: auto;
+                        }
+                        &:before {
+                            position: absolute;
+                            content: "※";
+                            top: 0;
+                            left: 0;
                         }
                     }
                 }
-                .remarks {
-                    @include font(14);
-                    position: relative;
-                    padding-left: 1em;
-                    @media screen and (max-width: $sm - 1) {
-                        @include font(13);
-                        max-width: 250px;
-                        margin: auto;
-                    }
-                    &:before {
+            }
+        }
+        .open-btn {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            height: 120px;
+            cursor: pointer;
+            p {
+                position: relative;
+                @include font(16);
+                letter-spacing: 0.05em;
+                line-height: 2;
+                text-align: center;
+                width: 100%;
+            }
+            &:not(.close) {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient( 180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50% );
+                p {
+                    padding-bottom: 10px;
+                    &::after {
+                        content: "";
                         position: absolute;
-                        content: "※";
+                        bottom: 0;
+                        left: calc(50% - 5px);
+                        transform: translateX(-50%);
+                        width: 10px;
+                        height: 10px;
+                        border-bottom: 1px solid $color_text;
+                        border-right: 1px solid $color_text;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            &.close {
+                p {
+                    padding-top: 10px;
+                    &::after {
+                        content: "";
+                        position: absolute;
                         top: 0;
-                        left: 0;
+                        left: calc(50% - 5px);
+                        transform: translateX(-50%);
+                        width: 10px;
+                        height: 10px;
+                        border-top: 1px solid $color_text;
+                        border-left: 1px solid $color_text;
+                        transform: rotate(45deg);
                     }
                 }
             }
@@ -224,7 +291,7 @@
             border: solid 1px #40708d;
             margin: 30px 0;
             padding: 10px 45px 10px 20px;
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 @include font(16);
             }
             &:before {
@@ -242,7 +309,7 @@
                 top: 50%;
                 right: 20px;
                 margin-top: -3px;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     width: 10px;
                     height: 10px;
                     margin-top: -2px;
@@ -264,8 +331,8 @@
                 @include font(20);
                 letter-spacing: 1px;
                 margin: 10px 0;
-                @media screen and (max-width: $sm - 1) {
-                    @include font(16);
+                @media screen and (max-width: ($sm - 1)) {
+                    @include font(17);
                 }
             }
             p {
@@ -278,8 +345,8 @@
                     max-width: 675px;
                     margin: auto;
                 }
-                @media screen and (max-width: $sm - 1) {
-                    @include font(14);
+                @media screen and (max-width: ($sm - 1)) {
+                    @include font(15);
                 }
                 span {
                   display: block;
@@ -321,7 +388,7 @@
         }
         .detail {
             padding: 0 0 30px;
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 padding-bottom: 15px;
             }
             .more {
@@ -347,8 +414,8 @@
                 width: 38%;
                 padding: 10px;
                 letter-spacing: 1px;
-                @media screen and (max-width: $sm - 1) {
-                    @include font(13);
+                @media screen and (max-width: ($sm - 1)) {
+                    @include font(14);
                 }
             }
             td {
@@ -356,8 +423,8 @@
                 text-align: left;
                 padding: 10px 20px;
                 letter-spacing: 1px;
-                @media screen and (max-width: $sm - 1) {
-                    @include font(13);
+                @media screen and (max-width: ($sm - 1)) {
+                    @include font(14);
                 }
             }
         }
@@ -369,8 +436,8 @@
             line-height: 1.8;
             letter-spacing: 1px;
             margin: 0 0 10px;
-            @media screen and (max-width: $sm - 1) {
-                @include font(14);
+            @media screen and (max-width: ($sm - 1)) {
+                @include font(15);
                 line-height: 1.8;
             }
         }
@@ -379,15 +446,16 @@
         width: 100%;
         max-width: 1000px;
         margin: 40px auto 0;
-        @media screen and (max-width: $sm - 1) {
+        @media screen and (max-width: ($sm - 1)) {
             margin: 30px auto 0;
         }
         .place-name {
             @include font(17);
             color: #000;
             letter-spacing: 2px;
-            @media screen and (max-width: $sm - 1) {
-                @include font(14);
+            @media screen and (max-width: ($sm - 1)) {
+                @include font(15);
+                letter-spacing: 1px;
             }
             i {
                 font-size: 1.25em;
@@ -396,7 +464,7 @@
         iframe {
             width: 100%;
             height: 400px;
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 height: 300px;
             }
         }
@@ -406,7 +474,7 @@
         //         @include font(17);
         //         color: #000;
         //         letter-spacing: 2px;
-        //         @media screen and (max-width: $sm - 1) {
+        //         @media screen and (max-width: ($sm - 1)) {
         //             @include font(14);
         //         }
         //         i {
@@ -423,7 +491,7 @@
         //         width: auto;
         //         height: 400px;
         //         text-align: left;
-        //         @media screen and (max-width: $sm - 1) {
+        //         @media screen and (max-width: ($sm - 1)) {
         //             height: 300px;
         //         }
         //         a {
@@ -445,8 +513,8 @@
                 @include font(16);
                 line-height: 1.8;
                 letter-spacing: 1px;
-                @media screen and (max-width: $sm - 1) {
-                    @include font(14);
+                @media screen and (max-width: ($sm - 1)) {
+                    @include font(15);
                 }
                 &:before {
                     position: absolute;
@@ -464,8 +532,8 @@
             line-height: 1.8;
             letter-spacing: 1px;
             margin: 0 0 10px;
-            @media screen and (max-width: $sm - 1) {
-                @include font(14);
+            @media screen and (max-width: ($sm - 1)) {
+                @include font(15);
                 line-height: 1.8;
             }
         }
@@ -479,7 +547,7 @@
                 background-color: #ededed;
                 border: solid 1px #e3e2e2;
                 padding: 10px 5px;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     @include font(14);
                 }
             }
@@ -488,7 +556,7 @@
                 letter-spacing: 1px;
                 border: solid 1px #e3e2e2;
                 padding: 10px 5px;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     @include font(14);
                 }
             }
@@ -505,8 +573,8 @@
                 @include font(16);
                 line-height: 1.8;
                 letter-spacing: 1px;
-                @media screen and (max-width: $sm - 1) {
-                    @include font(14);
+                @media screen and (max-width: ($sm - 1)) {
+                    @include font(15);
                     line-height: 1.8;
                 }
                 &:before {
@@ -525,9 +593,9 @@
             line-height: 1.8;
             letter-spacing: 3px;
             margin: 0 0 10px;
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 letter-spacing: 1px;
-                @include font(14);
+                @include font(15);
                 line-height: 1.8;
             }
             a {
@@ -546,8 +614,8 @@
                 padding-left: 1em;
                 letter-spacing: 1px;
                 display: inline-block;
-                @media screen and (max-width: $sm - 1) {
-                    @include font(14);
+                @media screen and (max-width: ($sm - 1)) {
+                    @include font(15);
                 }
                 a {
                     position: relative;
@@ -563,7 +631,7 @@
                         border-color: transparent transparent transparent #4d4d4d;
                         top: 8px;
                         left: 0;
-                        @media screen and (max-width: $sm - 1) {
+                        @media screen and (max-width: ($sm - 1)) {
                             border-width: 4px 0 4px 6.9px;
                         }
                     }
@@ -584,88 +652,145 @@
     .course-select {
         max-width: 675px;
         margin: 0 auto 35px;
-        cursor: pointer;
         position: relative;
         text-align: center;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
-        &:after {
-            content: "";
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 15px 22px 0 22px;
-            border-color: #4190ad transparent transparent transparent;
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            margin-left: -22px;
+        @media screen and (max-width: ($sm - 1)) {
+            margin-bottom: 25px;
         }
+        // &:after {
+        //     content: "";
+        //     width: 0;
+        //     height: 0;
+        //     border-style: solid;
+        //     border-width: 15px 22px 0 22px;
+        //     border-color: #4190ad transparent transparent transparent;
+        //     position: absolute;
+        //     bottom: -25px;
+        //     left: 50%;
+        //     margin-left: -22px;
+        // }
         .label {
-            position: absolute;
+            position: relative;
+            box-sizing: border-box;
+            @include font(20);
+            color: #ffffff;
+            letter-spacing: 0.05em;
+            line-height: 2;
             width: 100%;
-            z-index: 1;
-            @include font(17);
-            line-height: 35px;
             margin: 0;
-            border: 1px solid #ddd;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            color: #fff;
+            padding: 0.25em 0;
             background-color: #4191ad;
             border-bottom: solid 4px #316880;
             border-radius: 3px;
             -webkit-box-shadow: 2px 2px 2px #555;
                     box-shadow: 2px 2px 2px #555;
-            @media screen and (max-width: $sm - 1) {
-                @include font(16);
-                line-height: 30px;
+            z-index: 1;
+            @media screen and (max-width: ($sm - 1)) {
+                @include font(17);
+                padding: 0.5em 0;
+            }
+            // position: absolute;
+            // width: 100%;
+            // z-index: 1;
+            // @include font(17);
+            // line-height: 35px;
+            // margin: 0;
+            // border: 1px solid #ddd;
+            // -webkit-box-sizing: border-box;
+            //         box-sizing: border-box;
+            // color: #fff;
+            // background-color: #4191ad;
+            // border-bottom: solid 4px #316880;
+            // border-radius: 3px;
+            // -webkit-box-shadow: 2px 2px 2px #555;
+            //         box-shadow: 2px 2px 2px #555;
+            // @media screen and (max-width: ($sm - 1)) {
+            //     @include font(16);
+            //     line-height: 30px;
+            // }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                display: inline-block;
+                border-style: solid;
+                border-width: 12px 10px 0 10px;
+                border-color: #fff transparent transparent transparent;
+                transform: translateY(-50%);
+                @media screen and (max-width: ($sm - 1)) {
+                    right: 15px;
+                    border-width: 10px 8px 0 8px;
+                }
             }
             span {
                 position: relative;
-                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb(255, 255, 255)"></polygon></svg>');
-                background-size: 9px 6px;
-                background-position: right 0 center;
-                background-repeat: no-repeat;
-                padding-right: 1.5em;
+                display: inline-block;
+                padding: 0 60px;
+                // background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb(255, 255, 255)"></polygon></svg>');
+                // background-size: 9px 6px;
+                // background-position: right 0 center;
+                // background-repeat: no-repeat;
+                // padding-right: 1.5em;
             }
         }
         select {
-            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
             display: block;
-            width: 100%;
             @include font(17);
-            padding: 0 1em;
             color: #333;
+            letter-spacing: 0.05em;
+            line-height: 2;
+            width: 100%;
+            margin: 0;
+            padding: 0.5em 30px;
             background-color: #fff;
-            line-height: 35px;
             border: 1px solid #ddd;
             border-radius: 0;
             -webkit-appearance: none;
-            -moz-appearance: none;
             appearance: none;
-            // background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb(51, 51, 51)"></polygon></svg>');
-            // background-size: 9px 6px;
-            // background-position: right 1em center;
-            // background-repeat: no-repeat;
-            position: relative;
+            cursor: pointer;
             z-index: 2;
             opacity: 0;
-            @media screen and (max-width: $md - 1) {
-                @include font(16);
-                line-height: 30px;
-            }
-            @media screen and (max-width: $sm - 1) {
-                padding: 0 .5em;
-                background-position: right .5em center;
-            }
-            &:focus {
-                z-index: -1;
-                opacity: 1;
-            }
-            &:hover {
-	            opacity: .3;
-            }
+            // cursor: pointer;
+            // display: block;
+            // width: 100%;
+            // @include font(17);
+            // padding: 0 1em;
+            // color: #333;
+            // background-color: #fff;
+            // line-height: 35px;
+            // border: 1px solid #ddd;
+            // border-radius: 0;
+            // -webkit-appearance: none;
+            // -moz-appearance: none;
+            // appearance: none;
+            // // background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb(51, 51, 51)"></polygon></svg>');
+            // // background-size: 9px 6px;
+            // // background-position: right 1em center;
+            // // background-repeat: no-repeat;
+            // position: relative;
+            // z-index: 2;
+            // opacity: 0;
+            // @media screen and (max-width: ($md - 1)) {
+            //     @include font(16);
+            //     line-height: 30px;
+            // }
+            // @media screen and (max-width: ($sm - 1)) {
+            //     padding: 0 .5em;
+            //     background-position: right .5em center;
+            // }
+            // &:focus {
+            //     z-index: -1;
+            //     opacity: 1;
+            // }
+            // &:hover {
+	        //     opacity: .3;
+            // }
         }
     }
     .section-label {
@@ -839,7 +964,7 @@
         letter-spacing: 1px;
         text-indent: 1px;
         margin: 15px 0 0;
-        @media screen and (max-width: $sm - 1) {
+        @media screen and (max-width: ($sm - 1)) {
             @include font(16);
         }
     }
@@ -859,7 +984,7 @@
                 @include font(16);
                 color: #999;
                 text-align: left;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     @include font(14);
                 }
                 &:before {
@@ -902,7 +1027,7 @@
     background-color: #f0f0eb;
     margin-bottom: 50px;
     padding: 40px 0;
-    @media screen and (max-width: $sm - 1) {
+    @media screen and (max-width: ($sm - 1)) {
         margin-bottom: 30px;
         padding: 25px 0 10px;
     }
@@ -913,7 +1038,7 @@
         color: #40708d;
         letter-spacing: 2px;
         text-indent: 2px;
-        @media screen and (max-width: $sm - 1) {
+        @media screen and (max-width: ($sm - 1)) {
             @include font(18);
             margin-bottom: 20px;
         }
@@ -924,14 +1049,14 @@
             float: left;
             margin-left: calc(10% / 6);
             margin-right: calc(10% / 6);
-            @media screen and (max-width: $md - 1) {
+            @media screen and (max-width: ($md - 1)) {
                 width: 48%;
                 margin: 0 1%;
                 &:last-child {
                     display: none;
                 }
             }
-            @media screen and (max-width: $sm - 1) {
+            @media screen and (max-width: ($sm - 1)) {
                 width: 80%;
                 margin: 0 auto 30px;
                 float: none;
@@ -1045,7 +1170,7 @@
         text-decoration: none;
         line-height: 50px;
         vertical-align: middle;
-        @media screen and (max-width: $sm - 1) {
+        @media screen and (max-width: ($sm - 1)) {
             @include font(17);
             line-height: 40px;
         }
@@ -1067,7 +1192,7 @@
                 top: 50%;
                 right: -20px;
                 margin-top: -6px;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     width: 10px;
                     height: 10px;
                     margin-top: -5px;
