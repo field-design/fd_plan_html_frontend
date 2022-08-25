@@ -4,6 +4,11 @@
 ===================== */
 /*  global
 ------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -39,6 +44,16 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+}
+
+body.no-scroll {
+  position: relative;
+  overflow: hidden;
+}
+
+body.modalopen {
+  position: fixed;
+  left: 0;
 }
 
 ::-moz-selection {
@@ -1246,6 +1261,22 @@ h2 span {
 
 .order-table .text-center {
   text-align: center;
+}
+
+.order-table .credit-icon-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.order-table .credit-icon-wrapper img {
+  width: 30px;
+}
+
+.order-table .credit-icon-wrapper img:not(:last-child) {
+  margin-right: 10px;
 }
 
 .flex-counter {
