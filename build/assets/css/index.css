@@ -4,6 +4,11 @@
 ===================== */
 /*  global
 ------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -39,6 +44,16 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+}
+
+body.no-scroll {
+  position: relative;
+  overflow: hidden;
+}
+
+body.modalopen {
+  position: fixed;
+  left: 0;
 }
 
 ::-moz-selection {
@@ -875,8 +890,8 @@ img {
 }
 
 .mainvisual {
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .mainvisual .bxslider .slide {
@@ -889,7 +904,87 @@ img {
 .mainvisual .bxslider .slide:before {
   content: "";
   display: block;
-  padding-top: 46%;
+  padding-top: 600px;
+}
+
+@media screen and (max-width: 767px) {
+  .mainvisual .bxslider .slide:before {
+    padding-top: 300px;
+  }
+}
+
+.mainvisual .bx-controls {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+}
+
+@media screen and (min-width: 1000px) {
+  .mainvisual .bx-controls {
+    padding-right: 75px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .mainvisual .bx-controls {
+    display: none;
+    margin-top: 0;
+  }
+}
+
+.mainvisual .bx-controls .bx-pager {
+  position: relative;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 5px;
+  padding: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .mainvisual .bx-controls .bx-pager {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: right;
+  }
+}
+
+.mainvisual .bx-controls .bx-pager .bx-pager-item a {
+  position: relative;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50px;
+  height: 4px;
+  border-radius: 0;
+}
+
+.mainvisual .bx-controls .bx-pager .bx-pager-item a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #cccccc;
+  -webkit-transition: .3s ease-out;
+  -o-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.mainvisual .bx-controls .bx-pager .bx-pager-item a.active::before {
+  background-color: #416f8e;
 }
 
 .mainvisual .main-catch {
@@ -926,6 +1021,36 @@ img {
     font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
     top: -20px;
     right: 2%;
+  }
+}
+
+.mainvisual h2 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: auto;
+  height: 100%;
+  font: 400 16px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
+  color: #e3d15e;
+  letter-spacing: 0em;
+  line-height: 1.17;
+  letter-spacing: 0.5em;
+  text-align: center;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+@media screen and (max-width: 999px) {
+  .mainvisual h2 {
+    display: none;
   }
 }
 
@@ -1406,5 +1531,32 @@ img {
 
 .btn-wrap .genre-accordion ul li a {
   display: block;
+}
+
+.tour-list-content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .tour-list-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.tour-list-content h3 {
+  font: 400 28px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 2.8rem/160% "Noto Sans Japanese", sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  margin: 0 0 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .tour-list-content h3 {
+    font: 400 26px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 2.6rem/160% "Noto Sans Japanese", sans-serif;
+  }
 }
 /*# sourceMappingURL=index.css.map */
