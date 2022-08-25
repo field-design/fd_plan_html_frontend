@@ -4,6 +4,11 @@
 ===================== */
 /*  global
 ------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -39,6 +44,16 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+}
+
+body.no-scroll {
+  position: relative;
+  overflow: hidden;
+}
+
+body.modalopen {
+  position: fixed;
+  left: 0;
 }
 
 ::-moz-selection {
