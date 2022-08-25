@@ -98,3 +98,32 @@ $.fn.comma3 = function(){
 	});
 };
 $(".num3").comma3();
+
+
+
+//------------ modal ------------//
+$(".list-triger").on("click", function () {
+  $(this).toggleClass("is-active"), $(this).next().slideToggle(200), $(this).next().toggleClass("is-open")
+});
+
+$(function() {
+	var scrollPos;
+	$('.modal-triger-area').click(function() {
+		scrollPos = $(window).scrollTop();
+		$('.ModalArea').fadeIn(200);
+		$('body').addClass('modalopen').css({ top: -scrollPos });
+		return false;
+	});
+  $('.modal-triger-category').click(function() {
+		scrollPos = $(window).scrollTop();
+		$('.ModalCategory').fadeIn(200);
+		$('body').addClass('modalopen').css({ top: -scrollPos });
+		return false;
+	});
+	$('.modal-overlay, .modal-close, .input-triger').click(function() {
+		$('.modal-wrap').fadeOut(200);
+		$('body').removeClass('modalopen').css({ top: 0 });
+		$(window).scrollTop(scrollPos);
+		return false;
+	});
+});
