@@ -4,6 +4,11 @@
 ===================== */
 /*  global
 ------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -39,6 +44,16 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+}
+
+body.no-scroll {
+  position: relative;
+  overflow: hidden;
+}
+
+body.modalopen {
+  position: fixed;
+  left: 0;
 }
 
 ::-moz-selection {
@@ -874,26 +889,20 @@ img {
   height: 100%;
 }
 
-h2 {
+.tour-list-content {
+  margin-top: 60px;
+}
+
+.tour-list-content h2 {
   text-align: center;
   font: 400 20px/160% "Noto Sans Japanese", sans-serif;
   font: 400 2rem/160% "Noto Sans Japanese", sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   letter-spacing: 2px;
 }
 
-h2 span {
+.tour-list-content h2 span {
   border-bottom: solid 1px #000;
   padding: 0 5px 5px;
-}
-
-.tour .tours:nth-child(1), .tour .tours:nth-child(2) {
-  border-top: solid 1px #e3e2e2;
-}
-
-@media screen and (max-width: 999px) {
-  .tour .tours:nth-child(2) {
-    border-top: none;
-  }
 }
 /*# sourceMappingURL=list.css.map */
