@@ -87,19 +87,19 @@ $font-family_base: "Noto Sans Japanese",sans-serif;
 
 // media query
 @mixin max-lg {
-    @media screen and (max-width: $lg - 1) {
+    @media screen and (max-width: ($lg - 1)) {
         @content;
     }
 }
 
 @mixin max-md {
-    @media screen and (max-width: $md - 1) {
+    @media screen and (max-width: ($md - 1)) {
         @content;
     }
 }
 
 @mixin max-sm {
-    @media screen and (max-width: $sm - 1) {
+    @media screen and (max-width: ($sm - 1)) {
         @content;
     }
 }
@@ -123,13 +123,13 @@ $font-family_base: "Noto Sans Japanese",sans-serif;
 }
 
 @mixin sm-md {
-    @media screen and (min-width: $sm) and (max-width: $md -1) {
+    @media screen and (min-width: $sm) and (max-width: ($md - 1)) {
         @content;
     }
 }
 
 @mixin md-lg {
-    @media screen and (min-width: $md) and (max-width: $lg -1) {
+    @media screen and (min-width: $md) and (max-width: ($lg - 1)) {
         @content;
     }
 }

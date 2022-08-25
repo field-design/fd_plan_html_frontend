@@ -5,6 +5,10 @@
 ===================== */
 /*  global
 ------------------------*/
+* {
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
     @include min-sm {
@@ -29,6 +33,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    &.no-scroll {
+        position: relative;
+        overflow: hidden;
+    }
+    &.modalopen {
+        position: fixed;
+        left: 0;
+    }
 }
 
 ::selection {

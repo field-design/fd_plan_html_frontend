@@ -11,6 +11,30 @@ a {
     @include hover;
 }
 
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+    border-radius: 0;
+    appearance: button;
+    border: none;
+    box-sizing: border-box;
+    &::-webkit-search-decoration {
+        display: none;
+    }
+    &::focus {
+        outline-offset: -2px;
+    }
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
 #loading {
     width: 100px;
     .wave {
@@ -34,23 +58,16 @@ a {
 
 
 .global-header {
-    h1 {
-        @include font(12);
-        margin: 5px 10px;
-        @media screen and (max-width: $sm - 1) {
-            @include font(10);
-        }
-    }
     .logo {
         text-align: center;
-        margin: 15px auto 25px;
+        margin: 15px auto 20px;
         max-width: 300px;
         height: auto;
-        @media screen and (max-width: $md - 1) {
-            max-width: 300px;
+        @media screen and (max-width: ($md - 1)) {
+            max-width: 60%;
         }
-        @media screen and (max-width: $sm - 1) {
-            max-width: 250px;
+        a {
+            display: block;
         }
     }
     .global-nav {
@@ -62,15 +79,19 @@ a {
         .draw_nav {
             .drawer-hamburger {
                 position: fixed;
-                width: 3.5rem;
-                padding: 15px .75em 24px;
+                width: 4rem;
+                padding: 20px 1em 30px;
+                @media screen and (max-width: ($sm - 1)) {
+                    width: 3.5rem;
+                    padding: 15px 1em 25px;
+                }
             }
             .menu_sign {
                 position: absolute;
                 right: 50px;
                 top: 5px;
                 @include font(20);
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     top: 7px;
                     right: 45px;
                 }
@@ -78,7 +99,7 @@ a {
             .drawer-nav {
                 width: 26rem;
                 height: auto;
-                padding: 3px 0 10px;
+                padding: 3px 0 15px;
             }
         }
         .drawer-menu {
@@ -88,7 +109,7 @@ a {
                 letter-spacing: 1px;
                 font-weight: 100;
                 position: relative;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     font-weight: normal;
                 }
                 a {
@@ -114,7 +135,9 @@ a {
                 }
             }
             .nav-main {
-                border-top: solid 1px #efefef;
+                &:not(:first-child) {
+                    border-top: solid 1px #efefef;
+                }
                 a {
                     display: block;
                     position: relative;
@@ -138,7 +161,7 @@ a {
                 margin-left: 15px;
                 font-weight: lighter;
                 border-top: dashed 1px #6c6b6b;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     font-weight: normal;
                 }
                 & > a {
@@ -167,7 +190,7 @@ a {
                         @include font(14);
                         font-weight: lighter;
                         border-top: dashed 1px #6c6b6b;
-                        @media screen and (max-width: $sm - 1) {
+                        @media screen and (max-width: ($sm - 1)) {
                             font-weight: normal;
                         }
                         a {
@@ -200,7 +223,7 @@ a {
                 @include font(17);
                 font-weight: lighter;
                 letter-spacing: 1px;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     font-weight: normal;
                 }
                 a {
@@ -216,7 +239,7 @@ a {
             .sub {
                 @include font(13);
                 font-weight: lighter;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     font-weight: normal;
                 }
                 a {
@@ -237,7 +260,7 @@ a {
             }
         }
         .drawer-hamburger-icon, .drawer-hamburger-icon:after, .drawer-hamburger-icon:before {
-            height: 5.5px;
+            height: 2.5px;
         }
         .drawer-hamburger-icon:after, .drawer-hamburger-icon:before {
             top: -12px;
@@ -317,7 +340,7 @@ a {
                 cursor: pointer;
                 text-decoration: none;
                 @include hover;
-                @media screen and (max-width: $sm - 1) {
+                @media screen and (max-width: ($sm - 1)) {
                     padding: 5px 0;
                 }
                 i {
@@ -335,7 +358,7 @@ a {
                     padding-left: .625em;
                     font-size: 1.125em;
                     vertical-align: middle;
-                    @media screen and (max-width: $sm - 1) {
+                    @media screen and (max-width: ($sm - 1)) {
                         display: block;
                         margin-top: 2px;
                         padding-left: 0;
@@ -378,140 +401,161 @@ a {
     }
 }
 
-.tour {
-    padding-bottom: 30px;
-    .tours {
-        width: 48%;
-        padding: 10px 0;
-        border-bottom: solid 1px #e3e2e2;
-        &:nth-child(odd) {
-            float: left;
-        }
-        &:nth-child(even) {
-            float: right;
-        }
-        @media screen and (max-width: $lg - 1) {
-            width: 100%;
-            &:nth-child(odd) {
-                float: none;
-            }
-            &:nth-child(even) {
-                float: none;
-            }
-        }
-        a {
+/*　　　ツアー一覧
+-------------------------------------*/
+.tour-list {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: ($lg - 1)) {
+        justify-content: space-between;
+    }
+    @media screen and (max-width: ($md - 1)) {
+        display: block;
+    }
+    .tour-item {
+        position: relative;
+        text-decoration: none;
+        .tour-img {
             display: block;
-            position: relative;
-            &:before{
-                position: absolute;
-                content: "";
-                background-image: url(/assets/img/index/arrow_black.png);
-                width: 13px;
-                height: 25px;
-                top: 50%;
-                right: 5px;
-                margin-top: -6.5px;
-            }
-        }
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .image {
-            width: 150px;
-            float: left;
-            position: relative;
-            background-size: cover;
-            background-position: center center;
+            width: 100%;
+            height: 0;
+            padding-bottom: 66.5%;
             background-repeat: no-repeat;
-            @media screen and (max-width: $lg - 1) {
-                width: 190px;
-            }
-            @media screen and (max-width: $md - 1) {
-                width: 150px;
-            }
-            @media screen and (max-width: $sm - 1) {
-                width: 130px;
-            }
-            &:before {
-                content: "";
-                display: block;
-                padding-top: 100%;
-            }
+            background-position: center;
+            background-size: cover;
+            // @media screen and (max-width: ($md - 1)) {
+            //     width: 120px;
+            //     padding-bottom: 120px
+            // }
         }
-        .overview {
-            width: calc(100% - 150px);
-            float: right;
-            @media screen and (max-width: $lg - 1) {
-                width: calc(100% - 190px);
+        .tour-desc {
+            width: 100%;
+            margin-top: 25px;
+            @media screen and (max-width: ($lg - 1)) {
+                margin-top: 15px;
             }
-            @media screen and (max-width: $md - 1) {
-                width: calc(100% - 150px);
+            @media screen and (max-width: ($md - 1)) {
+                margin-top: 10px;
             }
-            @media screen and (max-width: $sm - 1) {
-                width: calc(100% - 130px);
+            .sub-ttl {
+                @include font(15);
+                color: $color_base;
+                letter-spacing: 0.05em;
+                line-height: 2.0;
+                margin: 0 0 0.5em;
+                @media screen and (max-width: ($lg - 1)) {
+                    margin-bottom: 0.25em;
+                }
             }
-            .inner {
-                padding: 0 25px 0 10px;
-                p {
-                    @include font(13);
-                    color: #416f8e;
+            h4 {
+                @include font(22);
+                color: $color_text;
+                letter-spacing: 0.05em;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                @media screen and (max-width: ($md - 1)) {
+                    @include font(20);
+                    letter-spacing: 0.03em;
+                }
+            }
+            .overview {
+                background-color: #F2F2F2;
+                margin-top: 15px;
+                padding: 15px;
+                dl {
+                    display: flex;
                     margin: 0;
                     padding: 0;
-                    @media screen and (max-width: $lg - 1) {
-                        @include font(16);
-                    }
-                    @media screen and (max-width: $md - 1) {
-                        @include font(13);
-                    }
-                    @media screen and (max-width: $sm - 1) {
-                        @include font(12);
-                    }
-                }
-                h3 {
-                    @include font(17);
-                    color: #000;
-                    margin: 0;
-                    padding: 5px 0;
-                    @media screen and (max-width: $lg - 1) {
-                        @include font(20);
-                    }
-                    @media screen and (max-width: $md - 1) {
-                        @include font(17);
-                    }
-                    @media screen and (max-width: $sm - 1) {
+                    dt, dd {
+                        flex: 0 1 auto;
                         @include font(15);
-                        padding: 2px 0;
+                        color: $color_text;
+                        line-height: 1.8;
+                        vertical-align: bottom;
+                        margin: 0;
+                        padding: 0;
                     }
-                }
-                .cost {
-                    padding-bottom: 10px;
-                    @media screen and (max-width: $lg - 1) {
-                        padding-bottom: 15px;
+                    dt {
+                        padding-right: 1.0em;
                     }
-                    @media screen and (max-width: $md - 1) {
-                        padding-bottom: 10px;
-                    }
-                    @media screen and (max-width: $sm - 1) {
-                        padding-bottom: 5px;
-                    }
-                    li {
-                        color: #666666;
-                        @include font(13);
-                        @media screen and (max-width: $lg - 1) {
-                            @include font(15);
-                            line-height: 1.8;
-                        }
-                        @media screen and (max-width: $md - 1) {
-                            @include font(13);
-                        }
-                        @media screen and (max-width: $sm - 1) {
-                            @include font(12);
+                    &.cost {
+                        .price {
+                            @include font(18);
+                            line-height: 1.4;
                         }
                     }
                 }
             }
+        }
+    }
+    &.list-style-clm2 { //2カラムの場合
+        .tour-item {
+            display: block;
+            width: 46.5%;
+            margin-bottom: 50px;
+            @media screen and (max-width: ($md - 1)) {
+                width: 100%;
+            }
+            &:not(:nth-child(2n)) {
+                margin-right: 7%;
+                @media screen and (max-width: ($md - 1)) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &.list-style-clm3 { //3カラムの場合
+        .tour-item {
+            display: block;
+            width: 31%;
+            margin-bottom: 50px;
+            @media screen and (max-width: ($lg - 1)) {
+                width: 48%;
+            }
+            @media screen and (max-width: ($md - 1)) {
+                width: 100%;
+            }
+            &:not(:nth-child(3n)) {
+                margin-right: 3.5%;
+                @media screen and (max-width: ($lg - 1)) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.tour-more-btn {
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+    @media screen and (max-width: ($lg - 1)) {
+        margin-top: 50px;
+    }
+    a {
+        display: block;
+        @include font(20);
+        color: #ffffff;
+        letter-spacing: 0.05em;
+        line-height: 1.8;
+        text-align: center;
+        text-decoration: none;
+        background-color: $color_text;
+        margin: 0;
+        padding: 0.75em 0.5em;
+        @media screen and (max-width: ($md - 1)) {
+            @include font(18);
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-top: solid 2px #ffffff;
+            border-right: solid 2px #ffffff;
+            transform: rotate(45deg);
+            margin-left: 1.5em;
         }
     }
 }
@@ -526,10 +570,10 @@ a {
         display: inline-block;
         margin: 0 5px 5px 0;
         padding: 0 5px;
-        @media screen and (max-width: $lg - 1) {
+        @media screen and (max-width: ($lg - 1)) {
             @include font(15);
         }
-        @media screen and (max-width: $md - 1) {
+        @media screen and (max-width: ($md - 1)) {
             @include font(12);
         }
         &.area {
@@ -659,7 +703,7 @@ a {
         color: #808080;
         letter-spacing: 1px;
         margin: 5px 0 0;
-        @media screen and (max-width: $sm - 1) {
+        @media screen and (max-width: ($sm - 1)) {
             @include font(11);
         }
         a {
@@ -727,6 +771,244 @@ a {
 .fw-900 {
     font-weight: 900!important;
 }
+
+/* =====================
+  searchBox
+===================== */
+.searchBox {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 380px;
+    transform: translateY(-50%);
+    z-index: 10;
+    @media screen and (max-width: ($lg - 1)) {
+        position: relative;
+        top: initial;
+        left: initial;
+        width: 100%;
+        margin: -100px auto 0;
+        padding: 60px 0 60px;
+        background: rgb(102,102,102);
+        background: linear-gradient(180deg, rgba(102,102,102,0) 0%, rgba(102,102,102,0.49734042553191493) 3%, rgba(102,102,102,0.800531914893617) 10%, rgba(102,102,102,1) 50%);
+        transform: translateY(0);
+    }
+    >.inner {
+        width: 100%;
+        padding: 20px 25px;
+        background-color: #fff;
+        @media screen and (max-width: ($lg - 1)) {
+            width: 80%;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: ($md - 1)) {
+            width: 90%;
+        }
+    }
+    p,button,input {
+        @include font(16);
+        color: $color_text;
+    }
+    .searchBox-caption {
+        margin-bottom: 1em;
+        @include font(16);
+        text-align: center;
+        color: #007589;
+    }
+    .searchBox-inner {
+        .search-flex {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            p {
+                width: 6em;
+                margin: 0;
+                padding: 0;
+            }
+            button,input {
+                position: relative;
+                width: calc(100% - 6em);
+                padding: 10px 2em 10px 1em;
+                text-align: left;
+                border: solid 1px #B3B3B3;
+                transition: all 0.2s ease;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    top: 50%;
+                    right: 1.25em;
+                    transform: rotate(45deg) translateY(-50%);
+                    border-top: 1px solid #898989;
+                    border-right: 1px solid #898989;
+                    transition: all 0.2s ease;
+                }
+                &:hover {
+                    background-color: #F5F5F5;
+                &:after {
+                    right: 1.05em;
+                    border-top: 1px solid #333;
+                    border-right: 1px solid #333;
+                }
+            }
+        }
+        input.datepicker::placeholder {
+            opacity: 1;
+            color: $color_text;
+        }
+        .datepicker {
+            cursor: pointer;
+        }
+        }
+        .search-submit {
+            padding-top: 10px;
+            text-align: center;
+            .btn-submit {
+                display: block;
+                width: 100%;
+                line-height: 46px;
+                color: #fff;
+                background: linear-gradient(to right,#96B372 0%,#007589 100%);
+            }
+        }
+    }
+}
+
+.modal-wrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    .modal-overlay {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0,0,0,.5);
+    }
+    .modal-inner {
+        position: absolute;
+        width: 95%;
+        max-width: 600px;
+        height: 90vh;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: #fff;
+        .modal-caption {
+            padding: 8px;
+            @include font(18);
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .modal-close {
+            cursor: pointer;
+            position: absolute;
+            margin: 10px 20px auto auto;
+            width: 30px;
+            height: 30px;
+            right: 0;
+            top: 0;
+        &:before,&:after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 20px;
+            margin: auto;
+            right: 13px;
+            top: 7px;
+            background-color: #333;
+        }
+        &:before {
+            transform: rotate(-45deg);
+        }
+        &:after {
+            transform: rotate(45deg);
+        }
+        }
+        .modal-list {
+            height: calc(90vh - 50px);
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            .list-item {
+                display: block;
+                margin: 0;
+                padding: 2px 8px;
+                button {
+                    display: block;
+                    width: 100%;
+                    padding: 12px 1em;
+                    @include font(15);
+                    text-align: left;
+                    transition: all 0.2s ease;
+                    &:hover {
+                        font-weight: bold;
+                        color: #007589;
+                    }
+                    &.is-active {
+                        font-weight: bold;
+                        &:hover {
+                        color: inherit;
+                        }
+                    }
+                }
+            }
+            > .list-item {
+                border-bottom: 1px solid #eae4e4;
+                > button {
+                    &:not(.list-all) {
+                        position: relative;
+                        &:after {
+                        position: absolute;
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        top: 50%;
+                        right: 1.25em;
+                        transform: rotate(45deg) translateY(-50%);
+                        border-bottom: 1px solid #898989;
+                        border-right: 1px solid #898989;
+                        transition: all 0.2s ease;
+                        }
+                    }
+                }
+            }
+            .modal-list-child {
+                display: none;
+                margin: 5px 8px 15px;
+                padding: 0;
+                background-color: #F5F5F5;
+                .list-item-child {
+                    padding: 0;
+                &:not(:last-child) {
+                    border-bottom: 1px solid #eae4e4;
+                }
+                button {
+                    position: relative;
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            width: 10px;
+                            height: 10px;
+                            top: 50%;
+                            right: 1.25em;
+                            transform: rotate(45deg) translateY(-50%);
+                            border-top: 1px solid #898989;
+                            border-right: 1px solid #898989;
+                            transition: all 0.2s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 /* =====================
