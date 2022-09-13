@@ -130,10 +130,6 @@
                     </div>
 
                     <div class="search-flex">
-                        <p>日程</p>
-                        <input class="datepicker" type="text" name="calendar" placeholder="日程を選択" readonly="readonly" value="">
-                    </div>
-                    <div class="search-flex">
                         <p>キーワード</p>
                         <input type="text" name="" placeholder="キーワードを入力" value="">
                     </div>
@@ -939,8 +935,6 @@
 <link rel="stylesheet" href="/assets/css/jquery.bxslider.min.css">
 <script src="/assets/js/jquery.bxslider.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/redmond/jquery-ui.css">
 
 <script type="text/javascript">
@@ -988,11 +982,6 @@
             }
         });
     });
-
-$("[name=calendar]").datepicker({
-  dateFormat: 'yy年mm月dd日',
-  minDate: "0",
-});
 </script>
 
 <div id="fb-root"></div>
