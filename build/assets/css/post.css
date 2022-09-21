@@ -29,6 +29,7 @@ html {
 
 html,
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -1493,6 +1494,40 @@ img {
     font: 400 14px/160% "Noto Sans Japanese", sans-serif;
     font: 400 1.4rem/160% "Noto Sans Japanese", sans-serif;
   }
+}
+
+.overview .information .potion-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overview .information .potion-list li {
+  position: relative;
+  padding-left: 1em;
+}
+
+.overview .information .potion-list li::before {
+  content: '・';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overview .information .potion-list li .op-ttl {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.overview .information .credit-wrap {
+  display: inline;
+}
+
+.overview .information .credit-wrap img {
+  width: 30px;
+  height: auto;
+  margin: 0 3px;
 }
 
 .overview .tour-detail p {

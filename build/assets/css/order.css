@@ -29,6 +29,7 @@ html {
 
 html,
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -1209,7 +1210,7 @@ h2 span {
   font: 400 1.4rem/160% "Noto Sans Japanese", sans-serif;
   border: 1px solid #dbdbdb;
   border-width: 0 0 1px;
-  padding: .5em .75em;
+  padding: .5em;
   vertical-align: middle;
 }
 
@@ -1249,6 +1250,22 @@ h2 span {
 
 .order-table tbody ul li {
   list-style: none;
+}
+
+.order-table.cart-table tbody tr td:nth-child(1) {
+  width: calc(100% - (6em + 5em + 6em));
+}
+
+.order-table.cart-table tbody tr td:nth-child(2) {
+  width: 6em;
+}
+
+.order-table.cart-table tbody tr td:nth-child(3) {
+  width: 5em;
+}
+
+.order-table.cart-table tbody tr td:nth-child(4) {
+  width: 6em;
 }
 
 .order-table .text-left {
