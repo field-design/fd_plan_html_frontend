@@ -276,7 +276,7 @@ h2 {
         @include font(14);
         border: 1px solid #dbdbdb;
         border-width: 0 0 1px;
-        padding: .5em .75em;
+        padding: .5em;
         vertical-align: middle;
     }
     thead {
@@ -314,6 +314,26 @@ h2 {
             padding: 0;
             li {
                 list-style: none;
+            }
+        }
+    }
+    &.cart-table {
+        tbody {
+            tr {
+                td {
+                    &:nth-child(1) {
+                        width: calc(100% - (6em + 5em + 6em));
+                    }
+                    &:nth-child(2) {
+                        width: 6em;
+                    }
+                    &:nth-child(3) {
+                        width: 5em;
+                    }
+                    &:nth-child(4) {
+                        width: 6em;
+                    }
+                }
             }
         }
     }

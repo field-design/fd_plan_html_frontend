@@ -428,6 +428,34 @@
                 }
             }
         }
+        .potion-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                position: relative;
+                padding-left: 1em;
+                &::before {
+                    content: '・';
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .op-ttl {
+                    display: inline-block;
+                    margin-right: 1em;
+                }
+            }
+        }
+        .credit-wrap {
+            display: inline;
+            img {
+                width: 30px;
+                height: auto;
+                margin: 0 3px;
+            }
+        }
     }
     .tour-detail {
         p {
