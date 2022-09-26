@@ -336,6 +336,10 @@ h2 {
                 }
             }
         }
+        span.option-name {
+            display: inline-block;
+            padding-left: 1em;
+        }
     }
     .text-left {
         text-align: left;
