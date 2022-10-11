@@ -350,6 +350,13 @@ h2 {
     .text-center {
         text-align: center;
     }
+    .border-none {
+        border: none;
+    }
+    .total th,
+    .total td {
+        @include font(16);
+    }
     .credit-icon-wrapper {
         display: flex;
         flex-wrap: wrap;
