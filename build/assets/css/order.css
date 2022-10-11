@@ -1285,6 +1285,16 @@ h2 span {
   text-align: center;
 }
 
+.order-table .border-none {
+  border: none;
+}
+
+.order-table .total th,
+.order-table .total td {
+  font: 400 16px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
+}
+
 .order-table .credit-icon-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
