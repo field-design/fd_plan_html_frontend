@@ -1683,10 +1683,16 @@ button {
 }
 
 .pagination ul li {
-  border: solid 1px #e7e7e7;
   display: table-cell;
   font: 400 18px/160% "Noto Sans Japanese", sans-serif;
   font: 400 1.8rem/160% "Noto Sans Japanese", sans-serif;
+}
+
+@media screen and (max-width: 479px) {
+  .pagination ul li {
+    font: 400 16px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
+  }
 }
 
 .pagination ul li a {
@@ -1696,6 +1702,7 @@ button {
   padding: 0 10px;
   line-height: 30px;
   display: block;
+  border: solid 1px #e7e7e7;
 }
 
 .pagination ul li a:hover {
@@ -1715,6 +1722,12 @@ button {
   padding: 0 10px 0 35px;
 }
 
+@media screen and (max-width: 479px) {
+  .pagination ul li.prev a {
+    padding: 0 10px 0 22px;
+  }
+}
+
 .pagination ul li.prev a:before {
   position: absolute;
   content: "";
@@ -1731,12 +1744,27 @@ button {
   margin-top: -4px;
 }
 
+@media screen and (max-width: 479px) {
+  .pagination ul li.prev a:before {
+    width: 7px;
+    height: 7px;
+    left: 10px;
+    margin-top: -3px;
+  }
+}
+
 .pagination ul li.prev a:hover:before {
   border-color: #fff;
 }
 
 .pagination ul li.next a {
   padding: 0 35px 0 10px;
+}
+
+@media screen and (max-width: 479px) {
+  .pagination ul li.next a {
+    padding: 0 22px 0 10px;
+  }
 }
 
 .pagination ul li.next a:before {
@@ -1753,6 +1781,15 @@ button {
   top: 50%;
   right: 15px;
   margin-top: -4px;
+}
+
+@media screen and (max-width: 479px) {
+  .pagination ul li.next a:before {
+    width: 7px;
+    height: 7px;
+    right: 10px;
+    margin-top: -3px;
+  }
 }
 
 .pagination ul li.next a:hover:before {
