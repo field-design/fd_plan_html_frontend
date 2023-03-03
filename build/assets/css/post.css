@@ -29,7 +29,6 @@ html {
 
 html,
 body {
-  width: 100%;
   overflow-x: hidden;
 }
 
@@ -1525,8 +1524,8 @@ img {
 }
 
 .overview .information .credit-wrap img {
-  width: 30px;
-  height: auto;
+  width: auto;
+  height: 19px;
   margin: 0 3px;
 }
 

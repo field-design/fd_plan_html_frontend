@@ -29,7 +29,6 @@ html {
 
 html,
 body {
-  width: 100%;
   overflow-x: hidden;
 }
 
@@ -1304,7 +1303,8 @@ h2 span {
 }
 
 .order-table .credit-icon-wrapper img {
-  width: 30px;
+  width: auto;
+  height: 19px;
 }
 
 .order-table .credit-icon-wrapper img:not(:last-child) {
