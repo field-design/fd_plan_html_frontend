@@ -361,7 +361,8 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         img {
-            width: 30px;
+            width: auto;
+            height: 19px;
             &:not(:last-child) {
                 margin-right: 10px;
             }
