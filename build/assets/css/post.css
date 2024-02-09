@@ -1248,7 +1248,6 @@ img {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(50%, white));
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 50%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 50%);
 }
 
@@ -1326,7 +1325,6 @@ img {
   -ms-transform: rotate(-45deg);
       transform: rotate(-45deg);
   -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
   transition: all .2s ease;
   top: 50%;
   right: 20px;
@@ -1346,7 +1344,6 @@ img {
   -ms-transform: rotate(135deg);
       transform: rotate(135deg);
   -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
   transition: all .2s ease;
   margin-top: -8px;
 }
@@ -1543,6 +1540,28 @@ img {
     font: 400 15px/160% "Noto Sans Japanese", sans-serif;
     font: 400 1.5rem/160% "Noto Sans Japanese", sans-serif;
     line-height: 1.8;
+  }
+}
+
+.overview .tour-detail table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.overview .tour-detail table tbody tr th, .overview .tour-detail table tbody tr td {
+  text-align: left;
+  font: 400 15px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 1.5rem/160% "Noto Sans Japanese", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  border: 1px solid #e3e2e2;
+  padding: 10px 15px;
+}
+
+@media screen and (max-width: 479px) {
+  .overview .tour-detail table tbody tr th, .overview .tour-detail table tbody tr td {
+    font: 400 16px/160% "Noto Sans Japanese", sans-serif;
+    font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
   }
 }
 
@@ -1902,7 +1921,6 @@ img {
   border-radius: 0;
   cursor: pointer;
   -webkit-transition: .2s;
-  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -2288,7 +2306,6 @@ img {
   font: 400 14px/160% "Noto Sans Japanese", sans-serif;
   font: 400 1.4rem/160% "Noto Sans Japanese", sans-serif;
   -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
   transition: all .2s ease;
   border-radius: 3px;
 }
@@ -2399,7 +2416,6 @@ img {
   -ms-transform: rotate(45deg);
       transform: rotate(45deg);
   -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
   transition: all .2s ease;
   top: 50%;
   right: -20px;
