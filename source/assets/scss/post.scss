@@ -469,6 +469,25 @@
                 line-height: 1.8;
             }
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            tbody {
+                tr {
+                    th, td {
+                        text-align: left;
+                        @include font(15);
+                        line-height: 1.8;
+                        letter-spacing: 1px;
+                        border: 1px solid #e3e2e2;
+                        padding: 10px 15px;
+                        @media screen and (max-width: ($sm - 1)) {
+                            @include font(16);
+                        }
+                    }
+                }
+            }
+        }
     }
     .map {
         width: 100%;
