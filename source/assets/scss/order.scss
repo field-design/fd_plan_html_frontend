@@ -301,6 +301,26 @@ h2 {
             th {
                 width: 8em;
             }
+            &.not-selectable {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    content: "在庫切れ";
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    @include font(13);
+                    color: #d22b2b;
+                    background-color: rgba(0,0,0,0.2);
+                }
+                td {
+                    opacity: .15;
+                }
+            }
         }
         .input {
             text-align: center;
