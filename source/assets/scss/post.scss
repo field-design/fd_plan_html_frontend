@@ -161,7 +161,7 @@
                 margin: auto;
                 max-width: 700px;
                 th {
-                    min-width: 55px;
+                    min-width: 115px;
                     margin: 0;
                     padding: 0 25px;
                     @include font(18);
@@ -171,6 +171,7 @@
                     display: inline-block;
                     @media screen and (max-width: ($sm - 1)) {
                         display: inline-block;
+                        min-width: 90px;
                         @include font(16);
                         line-height: 35px;
                         padding: 0 20px;
