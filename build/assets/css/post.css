@@ -1126,7 +1126,7 @@ img {
 }
 
 .overview .cost .cost-group-wrap table th {
-  min-width: 55px;
+  min-width: 115px;
   margin: 0;
   padding: 0 25px;
   font: 400 18px/160% "Noto Sans Japanese", sans-serif;
@@ -1140,6 +1140,7 @@ img {
 @media screen and (max-width: 479px) {
   .overview .cost .cost-group-wrap table th {
     display: inline-block;
+    min-width: 90px;
     font: 400 16px/160% "Noto Sans Japanese", sans-serif;
     font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
     line-height: 35px;
