@@ -1109,7 +1109,6 @@ h2 span {
   color: #fff;
   cursor: pointer;
   -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
   transition: all .2s ease;
 }
 
@@ -1462,7 +1461,6 @@ h2 span {
   -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
           box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
   transition: all .2s ease;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1659,7 +1657,6 @@ h2 span {
   color: #666;
   border: 1px solid;
   -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
   transition: all .2s ease;
   width: 100%;
   display: block;
@@ -1674,15 +1671,14 @@ h2 span {
 
 .conditions {
   max-width: 650px;
-  margin: 50px auto 50px;
-  padding: 10px 20px;
+  margin: 60px auto 0;
+  padding: 15px 30px;
   letter-spacing: 1px;
   border: solid 1px #00a5b3;
 }
 
 .conditions h5 {
   margin: 0;
-  padding-left: 23px;
   position: relative;
   font: 400 20px/160% "Noto Sans Japanese", sans-serif;
   font: 400 2rem/160% "Noto Sans Japanese", sans-serif;
@@ -1690,9 +1686,41 @@ h2 span {
 
 .conditions ul {
   margin: 5px 0;
+  padding: 0;
+  list-style: none;
 }
 
 .conditions ul li {
+  position: relative;
+  font-size: 13px;
+  line-height: 1.6;
+  padding-left: 1.5em;
+}
+
+.conditions ul li::before {
+  content: '・';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.privacy_policy {
+  max-width: 650px;
+  margin: 60px auto 0;
+  padding: 15px 30px;
+  letter-spacing: 1px;
+  border: solid 1px #00a5b3;
+}
+
+.privacy_policy h5 {
+  margin: 0;
+  position: relative;
+  font: 400 20px/160% "Noto Sans Japanese", sans-serif;
+  font: 400 2rem/160% "Noto Sans Japanese", sans-serif;
+}
+
+.privacy_policy p {
   font-size: 13px;
   position: relative;
   line-height: 1.6;
