@@ -638,23 +638,53 @@ h2 {
 
 .conditions {
     max-width: 650px;
-    margin: 50px auto 50px;
-    padding: 10px 20px;
+    margin: 60px auto 0;
+    padding: 15px 30px;
     letter-spacing: 1px;
     border: solid 1px #00a5b3;
     h5 {
         margin: 0;
-        padding-left: 23px;
+        // padding-left: 23px;
         position: relative;
         @include font(20);
     }
     ul {
         margin: 5px 0;
+        padding: 0;
+        list-style: none;
         li {
-           font-size: 13px;
-           position: relative;
-           line-height: 1.6;
-       }
+            position: relative;
+            font-size: 13px;
+            line-height: 1.6;
+            padding-left: 1.5em;
+            &::before {
+              content: '・';
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+        }
+    }
+}
+
+.privacy_policy {
+    max-width: 650px;
+    margin: 60px auto 0;
+    padding: 15px 30px;
+    letter-spacing: 1px;
+    border: solid 1px #00a5b3;
+    h5 {
+        margin: 0;
+        // padding-left: 23px;
+        position: relative;
+        @include font(20);
+    }
+    p {
+        font-size: 13px;
+        position: relative;
+        line-height: 1.6;
+        // padding-left: 23px;
     }
 }
 
