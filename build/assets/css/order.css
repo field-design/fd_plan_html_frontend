@@ -1413,6 +1413,12 @@ h2 span {
   font: 400 1.6rem/160% "Noto Sans Japanese", sans-serif;
 }
 
+.order-input .input-area label span,
+.order-payment .input-area label span {
+  font-size: 90%;
+  color: #d22b2b;
+}
+
 .order-input .input-area .label,
 .order-payment .input-area .label {
   display: block;
