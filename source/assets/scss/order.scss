@@ -442,6 +442,10 @@ h2 {
         margin: 10px 0;
         label {
             @include font(16);
+            span {
+                font-size: 90%;
+                color: #d22b2b;
+            }
         }
         .label {
             display: block;
